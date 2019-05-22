@@ -1,0 +1,31 @@
+{
+    "name": "levelfiveteam/railsbank-sdk",
+    "description": "Railsbank PHP SDK",
+    "type": "library",
+    "minimum-stability": "stable",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "zendframework/zend-validator": "^2.12",
+        "zendframework/zend-inputfilter": "^2.10"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5",
+        "php": "^7.1"
+    },
+    "authors": [
+        {
+            "name": "Gaurav Malhotra",
+            "email": "gaurav@level5.co.uk"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
+    }
+}
