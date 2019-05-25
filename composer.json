@@ -6,11 +6,13 @@
     "require": {
         "guzzlehttp/guzzle": "^6.3",
         "zendframework/zend-validator": "^2.12",
-        "zendframework/zend-inputfilter": "^2.10"
+        "zendframework/zend-inputfilter": "^2.10",
+        "zendframework/zend-config": "^3.2"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.5",
-        "php": "^7.1"
+        "php": "^7.1",
+        "phpstan/phpstan": "^0.11.7"
     },
     "authors": [
         {

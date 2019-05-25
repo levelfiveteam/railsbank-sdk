@@ -1,0 +1,25 @@
+language: php
+
+sudo: false
+
+php:
+  - 7.1
+  - 7.2
+
+env:
+  global:
+    - DEFAULT_COMPOSER_FLAGS="--no-interaction --no-ansi --no-progress --no-suggest"
+
+before_install:
+  - composer self-update
+  - composer clear-cache
+
+script:
+  - ./vendor/bin/phpunit
+
+after_success:
+  - echo "Passed"
+
+notifications:
+  email: false
+
