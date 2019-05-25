@@ -15,7 +15,7 @@ before_install:
   - composer clear-cache
 
 install:
-  - composer install -o
+  - composer install
 
 script:
   - ./vendor/bin/phpunit
