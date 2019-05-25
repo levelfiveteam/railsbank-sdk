@@ -14,11 +14,14 @@ before_install:
   - composer self-update
   - composer clear-cache
 
+install:
+  - composer install -o
+
 script:
   - ./vendor/bin/phpunit
 
 after_success:
-  - echo "Passed"
+  - echo "Success!"
 
 notifications:
   email: false
