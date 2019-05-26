@@ -24,7 +24,7 @@ class VersionNumber extends Entity implements EntityInterface
     {
         $response = new ArrayResponse($response);
         $this->version = $response->offsetGet('version');
-        
+
         parent::__construct($response);
     }
 

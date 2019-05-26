@@ -39,7 +39,6 @@ class RailsbankConfig
 
         /** @var Config $railsbankConfig */
         $railsbankConfig = $this->configService->get('railsbank_configuration');
-        $this->validateRailsbankConfiguration($railsbankConfig);
 
         if ( !empty($mode)) {
             $this->mode = $mode;
