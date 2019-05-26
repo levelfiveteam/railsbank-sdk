@@ -67,11 +67,11 @@ class ConfigServiceFactory
 
     /**
      * @param Config $config
-     * @return bool
+     * @return Config
      *
      * @throws RailsbankConfigurationMissingException
      */
-    private function getRailsbankConfiguration(Config $config) :? bool
+    private function getRailsbankConfiguration(Config $config) :? Config
     {
         if (! $config = $config->offsetGet('railsbank_configuration')) {
             throw new RailsbankConfigurationMissingException();
