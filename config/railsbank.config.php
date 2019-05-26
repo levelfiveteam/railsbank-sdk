@@ -1,4 +1,5 @@
 <?php
+use LevelFiveTeam\RailsBank\Entity;
 use LevelFiveTeam\Railsbank\Command;
 use LevelFiveTeam\Railsbank\CommandHandler;
 
@@ -34,10 +35,10 @@ return [
     'commands' => [
         Command\Version\GetVersion::class => CommandHandler\Version\GetVersionCommandHandler::class,
     ],
-    'validators' => [
-
+    'entity_map' => [
+        Command\Version\GetVersion::class => Entity\VersionNumber::class,
     ],
-    'middleware' => [
-
+    'railsbank_http_url' => [
+        Command\Version\GetVersion::class => '/v1/customer/version',
     ],
 ];

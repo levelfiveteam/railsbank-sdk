@@ -1,30 +1,30 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\Entiity;
+namespace LevelFiveTeam\Railsbank\Entity;
 
-use Zend\Validator;
-
-class VersionNumber
+/**
+ * Class VersionNumber
+ * @package LevelFiveTeam\Railsbank\Entity
+ */
+class VersionNumber extends Entity implements EntityInterface
 {
     /**
      * @var string
      */
     private $version;
 
+    /**
+     * VersionNumber constructor.
+     * @param array $response
+     */
     public function __construct(array $response)
     {
-        //
+        $this->version = $response['version'];
+        parent::__construct($response);
     }
 
     public function getVersion(): string
     {
         return $this->version;
-    }
-
-    private function validate($dataset = [])
-    {
-        return [
-            'version' => Validator\NotEmpty::STRING,
-        ];
     }
 }

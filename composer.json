@@ -4,6 +4,7 @@
     "type": "library",
     "minimum-stability": "stable",
     "require": {
+        "ext-json": "*",
         "guzzlehttp/guzzle": "^6.3",
         "zendframework/zend-validator": "^2.12",
         "zendframework/zend-inputfilter": "^2.10",
