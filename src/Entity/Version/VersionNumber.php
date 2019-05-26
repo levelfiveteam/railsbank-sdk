@@ -3,6 +3,7 @@ namespace LevelFiveTeam\Railsbank\Entity\Version;
 
 use LevelFiveTeam\Railsbank\Entity\Entity;
 use LevelFiveTeam\Railsbank\Entity\EntityInterface;
+use LevelFiveTeam\Railsbank\Helper\ArrayResponse;
 
 /**
  * Class VersionNumber
@@ -21,7 +22,9 @@ class VersionNumber extends Entity implements EntityInterface
      */
     public function __construct($response)
     {
-        $this->version = $response->version;
+        $response = new ArrayResponse($response);
+        $this->version = $response->offsetGet('version');
+        
         parent::__construct($response);
     }
 

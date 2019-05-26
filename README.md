@@ -1,10 +1,8 @@
-#Railsbank PHP SDK
+# Railsbank PHP SDK
 
-[![Build Status](https://travis-ci.org/levelfiveteam/railsbank-sdk.svg?branch=master)](https://travis-ci.org/levelfiveteam/railsbank-sdk)
+[![Build Status](https://travis-ci.com/levelfiveteam/railsbank-sdk.svg?token=42A9e8Yz9HCHugYVWyzW&branch=master)](https://travis-ci.com/levelfiveteam/railsbank-sdk)
 
-##Instructions
+## Instructions
 
 
-#####Being built by the team at Level 5 (www.level5.co.uk)
-
-####Contributors
+#### Contributors
