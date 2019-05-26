@@ -6,7 +6,12 @@ abstract class Entity
 {
     protected $rawResponse = [];
 
-    public function __construct(array $response = [])
+    /**
+     * Entity constructor.
+     *
+     * @param mixed $response
+     */
+    public function __construct($response)
     {
         $this->rawResponse = $response;
     }

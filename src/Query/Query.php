@@ -1,9 +1,9 @@
 <?php
-namespace LevelFiveTeam\Railsbank\Command;
+namespace LevelFiveTeam\Railsbank\Query;
 
 use Zend\Config\Factory;
 
-abstract class Command
+abstract class Query
 {
 //    public function validate(array $payload)
 //    {

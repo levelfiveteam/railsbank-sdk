@@ -4,6 +4,7 @@
     "type": "library",
     "minimum-stability": "stable",
     "require": {
+        "php": "^7.1",
         "ext-json": "*",
         "guzzlehttp/guzzle": "^6.3",
         "zendframework/zend-validator": "^2.12",
@@ -13,7 +14,6 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^7.5",
-        "php": "^7.1",
         "phpstan/phpstan": "^0.11.7"
     },
     "authors": [
@@ -23,9 +23,9 @@
         }
     ],
     "autoload": {
-        "classmap": [
-            "src/"
-        ]
+        "psr-4": {
+            "LevelFiveTeam\\Railsbank\\": "src/"
+        }
     },
     "autoload-dev": {
         "classmap": [

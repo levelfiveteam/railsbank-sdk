@@ -2,7 +2,7 @@
 
 namespace LevelFiveTeam\Railsbank\Exception;
 
-use LevelFiveTeam\Railsbank\CommandInterface;
+use LevelFiveTeam\Railsbank\Command\CommandInterface;
 
 class EndpointNotFoundException extends \Exception
 {

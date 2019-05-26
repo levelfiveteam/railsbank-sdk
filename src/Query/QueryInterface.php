@@ -1,8 +1,8 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\Command;
+namespace LevelFiveTeam\Railsbank\Query;
 
-interface CommandInterface
+interface QueryInterface
 {
     public function getInputFilterSpecification() : array;
 }

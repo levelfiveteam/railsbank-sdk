@@ -1,7 +1,5 @@
 <?php
-use LevelFiveTeam\RailsBank\Entity;
-use LevelFiveTeam\Railsbank\Command;
-use LevelFiveTeam\Railsbank\CommandHandler;
+use LevelFiveTeam\Railsbank\Query;
 
 /**
  * Configuration for Railsbank API
@@ -33,12 +31,14 @@ return [
         ],
     ],
     'commands' => [
-        Command\Version\GetVersion::class => CommandHandler\Version\GetVersionCommandHandler::class,
+        //
     ],
     'entity_map' => [
-        Command\Version\GetVersion::class => Entity\VersionNumber::class,
+        Query\Version\GetVersion::class => "LevelFiveTeam\\Railsbank\\Entity\\Version\\VersionNumber",
+        Query\Me\Information::class => "LevelFiveTeam\\Railsbank\\Entity\\Me\\Information",
     ],
     'railsbank_http_url' => [
-        Command\Version\GetVersion::class => '/v1/customer/version',
+        Query\Version\GetVersion::class => '/v1/customer/version',
+        Query\Me\Information::class => '/v1/customer/me',
     ],
 ];

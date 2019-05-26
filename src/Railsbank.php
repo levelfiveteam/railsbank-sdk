@@ -3,10 +3,15 @@
 namespace LevelFiveTeam\Railsbank;
 
 use GuzzleHttp\Client;
+use LevelFiveTeam\Railsbank\Query\QueryInterface;
 use Zend\Config\Config;
 use LevelFiveTeam\Railsbank\Entity\EntityInterface;
+use LevelFiveTeam\Railsbank\Command\CommandInterface;
+use LevelFiveTeam\Railsbank\Exception\EntityNotExistException;
 use LevelFiveTeam\Railsbank\Exception\EntityNotFoundException;
 use LevelFiveTeam\Railsbank\Exception\EndpointNotFoundException;
+
+use LevelFiveTeam\Railsbank\Entity\VersionNumber;
 
 /**
  * This is the service that will simplify the commands (and act as a controller)
@@ -36,39 +41,27 @@ class Railsbank
     }
 
     /**
-     * @var string
-     */
-    private $requestType = 'GET';
-
-    /**
      * @param CommandInterface $command
      */
     public function runCommand(CommandInterface $command)
     {
-        $this->requestType = 'POST';
         var_dump($command, 'test');
         die();
     }
 
     /**
-     * @param CommandInterface $command
+     * @param QueryInterface $query
      * @return EntityInterface
      */
-    public function runQuery(CommandInterface $command) :? EntityInterface
+    public function runQuery(QueryInterface $query) :? EntityInterface
     {
-        $this->requestType = 'GET';
-
-        try {
-            /** @var EntityInterface $response */
-            $response = $this->handleApiCall($command, 'GET');
-        } catch (\Exception $e) {
-
-        }
+        /** @var EntityInterface $response */
+        $response = $this->handleApiCall($query, 'GET');
 
         return $response;
     }
 
-    private function handleApiCall(CommandInterface $command, string $method = 'GET')
+    private function handleApiCall($command, string $method = 'GET')
     {
         $apiUrl = $this->getApiUrl($command);
         $customerKey = $this->getCustomerApiKey();
@@ -90,11 +83,23 @@ class Railsbank
         $content = $response->getBody()->getContents();
 
         $decodedContent = json_decode($content);
-        $entity = $this->getEntity($command);
-        return new $entity($decodedContent);
+
+        $entity = $this->getEntity($command, $decodedContent);
+
+        return $entity;
     }
 
-    private function getEntity(CommandInterface $command) :? string
+    /**
+     * @param QueryInterface|CommandInterface $command
+     * @param $decodedContent
+     *
+     * @return EntityInterface|null
+     *
+     * @throws EntityNotExistException
+     * @throws EntityNotFoundException
+     * @throws \ReflectionException
+     */
+    private function getEntity($command, $decodedContent) :? EntityInterface
     {
         /** @var Config $apiConfig */
         $apiConfig = $this->configService->getBaseConfig()->get('entity_map');
@@ -103,8 +108,14 @@ class Railsbank
             throw new EntityNotFoundException($command);
         }
 
-        var_dump(class_exists($entity));
-        die();
+        if (! class_exists($entity)) {
+            throw new EntityNotExistException($entity);
+        }
+
+        $reflectedClass = ((new \ReflectionClass($entity)));
+
+        /** @var EntityInterface $entity */
+        $entity = $reflectedClass->newInstance($decodedContent);
 
         return $entity;
     }
@@ -115,9 +126,9 @@ class Railsbank
      *
      * @throws EndpointNotFoundException
      */
-    private function getApiUrl(CommandInterface $command) :? string
+    private function getApiUrl($command) :? string
     {
-        return $this->configService->getBaseApiUrl($command) . $this->getEndpoint($command);
+        return $this->configService->getBaseApiUrl() . $this->getEndpoint($command);
     }
 
     /**
@@ -126,7 +137,7 @@ class Railsbank
      *
      * @throws EndpointNotFoundException
      */
-    private function getEndpoint(CommandInterface $command) :? string
+    private function getEndpoint($command) :? string
     {
         /** @var Config $apiConfig */
         $apiConfig = $this->configService->getBaseConfig()->get('railsbank_http_url');

@@ -12,9 +12,9 @@ class ArrayResponse
      * ArrayResponse constructor.
      * @param array $apiResponse
      */
-    public function __construct(array $apiResponse = [])
+    public function __construct($apiResponse)
     {
-        $this->apiResponse = $apiResponse;
+        $this->apiResponse = (array) $apiResponse;
     }
 
     public function offsetSet($offset, $value): void
