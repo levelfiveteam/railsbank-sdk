@@ -4,7 +4,7 @@
 
 
 ### Licence
-You are free to use this package for commercial and non-commercial.   
+You are free to reuse and adapt this content with credit, for non-commercial purposes.  Please review License for further information.
 
 ## Instructions
 
