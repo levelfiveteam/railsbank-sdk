@@ -4,7 +4,7 @@
 
 
 ### Licence
-Level 5's Railsbank SDK Kit is released under a [Creative Commons Attribution-NonCommercial licence](http://creativecommons.org/licenses/by-nc/2.0/uk/). You are free to reuse and adapt this content with credit, for non-commercial purposes.
+You are free to reuse and adapt this content with credit, for non-commercial purposes.  Please review License for further information.
 
 ## Instructions
 
