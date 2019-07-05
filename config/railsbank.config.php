@@ -46,6 +46,7 @@ return [
 
         Command\Customer\EndUsers\CreatePerson::class => CommandHandler\Customer\EndUsers\CreatePersonHandler::class,
         Command\Customer\Ledger\CreateLedger::class => CommandHandler\Customer\Ledger\CreateLedgerHandler::class,
+        Command\Customer\Ledger\CloseLedger::class => CommandHandler\Customer\Ledger\CloseLedgerHandler::class,
         Command\Beneficiary\CreateBeneficiary::class => CommandHandler\Beneficiary\CreateBeneficiaryHandler::class,
         Command\Transaction\CreateTransaction::class => CommandHandler\Transaction\CreateTransactionHandler::class,
         Command\Card\CreateCard::class => CommandHandler\Card\CreateCardHandler::class,
