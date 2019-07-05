@@ -41,6 +41,7 @@ return [
         Query\Card\GetCards::class => QueryHandler\Card\GetCardsHandler::class,
         Query\Card\GetCardsByLedgerId::class => QueryHandler\Card\GetCardsByLedgerIdHandler::class,
         Query\Card\GetCardImageUrl::class => QueryHandler\Card\GetCardImageUrlHandler::class,
+        Query\Card\GetPin::class => QueryHandler\Card\GetPinHandler::class,
         Query\Beneficiary\GetBeneficiaries::class => QueryHandler\Beneficiary\GetBeneficiariesHandler::class,
 
         Command\Customer\EndUsers\CreatePerson::class => CommandHandler\Customer\EndUsers\CreatePersonHandler::class,
@@ -61,6 +62,7 @@ return [
         Query\Card\GetCardsByLedgerId::class => "LevelFiveTeam\\Railsbank\\Entity\\Card\\Cards",
         Query\Card\GetCard::class => "LevelFiveTeam\\Railsbank\\Entity\\Card\\Card",
         Query\Card\GetCardImageUrl::class => "LevelFiveTeam\\Railsbank\\Entity\\Card\\CardImage",
+        Query\Card\GetPin::class => "LevelFiveTeam\\Railsbank\\Entity\\Card\\Pin",
         Query\Beneficiary\GetBeneficiaries::class => "LevelFiveTeam\\Railsbank\\Entity\\Beneficiary\\Beneficiaries",
 
         Command\Customer\EndUsers\CreatePerson::class => "LevelFiveTeam\\Railsbank\\Entity\\Customer\\EndUsers\\EndUserId",
@@ -83,6 +85,7 @@ return [
         Query\Card\GetCardsByLedgerId::class => '/v1/customer/cards',
         Query\Card\GetCard::class => '/v1/customer/cards/{{card_id}}',
         Query\Card\GetCardImageUrl::class => '/v1/customer/cards/{{card_id}}/image',
+        Query\Card\GetPin::class => '/v1/customer/cards/{{card_id}}/pin',
         Query\Beneficiary\GetBeneficiaries::class => '/v1/customer/beneficiaries?holder_id={{holder_id}}',
 
         Command\Customer\EndUsers\CreatePerson::class => '/v1/customer/endusers',
