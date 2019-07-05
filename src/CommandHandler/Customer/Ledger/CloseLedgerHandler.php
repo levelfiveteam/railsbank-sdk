@@ -8,7 +8,6 @@ use LevelFiveTeam\Railsbank\Command\Customer\Ledger\CloseLedger;
 
 /**
  * Class CloseLedgerHandler
- * @package LevelFiveTeam\Railsbank\CommandHandler\Customer\Ledger
  */
 class CloseLedgerHandler extends Handler
 {
@@ -16,7 +15,7 @@ class CloseLedgerHandler extends Handler
      * @param CloseLedger $command
      * @return \LevelFiveTeam\Railsbank\Entity\EntityInterface|null
      */
-    public function handleLedgers(CloseLedger $command)
+    public function handleCloseLedger(CloseLedger $command)
     {
         $client = new RailsbankClient($command->getRailsbankConfig());
         $ledger = $client->handleApiCall($command, 'POST');

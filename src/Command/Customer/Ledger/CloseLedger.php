@@ -7,7 +7,6 @@ use LevelFiveTeam\Railsbank\CommandInterface;
 
 /**
  * Class CloseLedger
- * @package LevelFiveTeam\Railsbank\Command\Customer\Ledger
  */
 class CloseLedger extends Command implements CommandInterface
 {
