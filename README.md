@@ -33,14 +33,25 @@ The response will be an immutable object, with the option to see the array.
 
 Action | Command or Query | Response type
 ---|---|---
-GET | Query\Version\GetVersion | \Entity\Version\VersionNumber
-GET | Query\Me\Information | \Entity\Me\Information
-GET | Query\Customer\GetLedger | \Entity\Customer\GetLedger
-GET | Query\Customer\GetEnduser | \Entity\Customer\EndUsers\EndUser
-GET | Query\Transaction\GetTransaction | \Entity\Transaction\DetailedTransaction
-GET | Query\Transaction\GetTransactions | \Entity\Transaction\Transactions
-POST | Command\Customer\EndUsers\Person | \Entity\Customer\EndUsers\EndUserId
-POST | Command\Customer\Ledger\CreateLedger | \Entity\Customer\Ledger
-POST | Command\Customer\Ledger\CloseLedger | \Entity\Customer\Ledger
-POST | Command\Beneficiary\CreateBeneficiary | \Entity\Beneficiary\Beneficary
+GET | Query\Version\GetVersion | QueryHandler\Version\GetVersionHandler
+GET | Query\Me\Information | QueryHandler\Me\InformationHandler
+GET | Query\Customer\GetLedger | QueryHandler\Customer\GetLedgerHandler
+GET | Query\Customer\GetLedgers | QueryHandler\Customer\GetLedgersHandler
+GET | Query\Customer\GetEndusers | QueryHandler\Customer\GetEndusersHandler
+GET | Query\Customer\GetEnduser | QueryHandler\Customer\GetEnduserHandler
+GET | Query\Transaction\GetTransaction | QueryHandler\Transaction\GetTransactionHandler
+GET | Query\Transaction\GetTransactions | QueryHandler\Transaction\GetTransactionsHandler
+GET | Query\Card\GetCard | QueryHandler\Card\GetCardHandler
+GET | Query\Card\GetCards | QueryHandler\Card\GetCardsHandler
+GET | Query\Card\GetCardsByLedgerId | QueryHandler\Card\GetCardsByLedgerIdHandler
+GET | Query\Card\GetCardImageUrl | QueryHandler\Card\GetCardImageUrlHandler
+GET | Query\Card\GetPin | QueryHandler\Card\GetPinHandler
+GET | Query\Beneficiary\GetBeneficiaries | QueryHandler\Beneficiary\GetBeneficiariesHandler
+POST | Command\Customer\EndUsers\CreatePerson | CommandHandler\Customer\EndUsers\CreatePersonHandler
+POST | Command\Customer\Ledger\CreateLedger | CommandHandler\Customer\Ledger\CreateLedgerHandler
+POST | Command\Beneficiary\CreateBeneficiary | CommandHandler\Beneficiary\CreateBeneficiaryHandler
+POST | Command\Transaction\CreateTransaction | CommandHandler\Transaction\CreateTransactionHandler
+POST | Command\Card\CreateCard | CommandHandler\Card\CreateCardHandler
+POST | Command\Card\ActivateCard | CommandHandler\Card\ActivateCardHandler
+
 
