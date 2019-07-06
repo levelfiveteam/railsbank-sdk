@@ -29,7 +29,7 @@ abstract class CommandOrQueryTest extends TestCase implements CommandOrQueryTest
         self::assertInstanceOf(Command::class, $command);
 
         if (! $expectedBody) {
-            self::assertEquals($input['expected_body'], $expectedBody);
+            self::assertEquals($input, $expectedBody);
         }
     }
 }
