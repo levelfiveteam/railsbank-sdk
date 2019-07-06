@@ -6,13 +6,7 @@ use LevelFiveTeam\Railsbank\Command\Customer\EndUsers\CreatePerson;
 use LevelFiveTeam\Railsbank\Query\Customer\GetLedger;
 use LevelFiveTeam\Railsbank\Railsbank;
 
-// Store Railsbank in a DI
-try {
-    $railsbank = new Railsbank('demo.config.php', 'play_live');
-} catch (\Exception $e) {
-    var_dump($e->getCode(), $e->getMessage());
-    die();
-}
+$railsbank = new Railsbank('demo.config.php', 'play_live');
 
 // In controller or service, you can create the individual first, then ledger, and get an account - or all in one :)
 // This example splits up the commands for queue, or can be done in memory just like below....

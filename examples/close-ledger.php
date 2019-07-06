@@ -7,13 +7,7 @@ use LevelFiveTeam\Railsbank\Railsbank;
 
 $ledgerId = $argv[1];
 
-// Store Railsbank in a DI
-try {
-    $railsbank = new Railsbank('demo.config.php', 'live_account');
-} catch (\Exception $e) {
-    var_dump($e->getCode(), $e->getMessage());
-    die();
-}
+$railsbank = new Railsbank('demo.config.php', 'live_account');
 
 /** @var Ledger $ledger */
 $ledger = $railsbank->handle(new CloseLedger(['ledger_id' => $ledgerId]));
