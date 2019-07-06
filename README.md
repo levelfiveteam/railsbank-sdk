@@ -3,6 +3,9 @@
 [![Build Status](https://travis-ci.com/levelfiveteam/railsbank-sdk.svg?token=42A9e8Yz9HCHugYVWyzW&branch=master)](https://travis-ci.com/levelfiveteam/railsbank-sdk)
 
 
+This repository is actively used in projects, and we will be maintaining it regularly.
+
+
 ### Licence
 You are free to reuse and adapt this content with credit, for non-commercial purposes.  Please review License for further information.
 
@@ -78,6 +81,6 @@ POST | Command\Card\ActivateCard
 
 ## Improvements
 
-We are looking to add more queries and commands to the service after this phase.  It is a dependency that is being actively used, and tested.
+We are looking to add more queries and commands to the service after this phase.  
 
 Create an issue if you have any problems via Github.
