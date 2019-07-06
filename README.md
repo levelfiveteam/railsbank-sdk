@@ -11,27 +11,24 @@ You are free to reuse and adapt this content with credit, for non-commercial pur
 
 ## Instructions
 
-Railsbank PHP SDK Kit, that allows you to provide a full facility to create accounts, ledgers, and mastercard for your application.
+This is the Railsbank PHP SDK Kit that allows you to provide a full facility to create customer accounts, ledgers, and a mastercard for your business/service.
 
-We use commands and queries to de-couple requests, and allowing the ability to use a queue handler (AWS SQS, RabbitMQ etc...) for bulk queries.
+We use commands and queries to de-couple requests, and to allow the ability to use a messaging queue system (AWS SQS, RabbitMQ etc...).
 
-Important note; we are only supporting GBP.  Our aim is to release this in v1.2.
+1. Simply set your application to store the service as a factory;
 
-Simply set your application to store the service as a factory;
-
-`
+```
 $railsbank = new Railsbank('demo.config.php', 'live_account');
-`
+```
 
-Create commands and queries as and when you need to (example below returns back a response to give you the API Version);
+2. Create commands and queries as and when you need to (example below returns back a response to give you the API Version);
 
-Example query:
-
+*Example query:*
 `
 $response = $railsbank->handle(new GetVersion());
 `
 
-Example Command:
+*Example Command:*
 ```
 $command = new CreatePerson(
     [
@@ -48,9 +45,11 @@ $command = new CreatePerson(
 $person = $railsbank->handle($command);
 ```
 
-You will not need to validate data using this service.  Validation happens are the command level, and wil return as a `DomainException`.  
+You will not need to validate data using this service.  Validation happens at the command level.  Any validation errors will return as a `DomainException` with a json error message.  
 
-The response will be an immutable object, with the option to see the the full response.
+The valid response will be an immutable object, with the option to see the the full response.
+
+Important note; we are only supporting GBP.  Our aim is to release this in v1.2.
 
 
 ## Commands and Queries
