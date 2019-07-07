@@ -38,6 +38,10 @@ class RailsbankClient
         }
 
         foreach ($variables as $variable => $value) {
+            if (is_array($value)) {
+                continue;
+            }
+
             $apiUrl = str_replace('{{' . $variable . '}}', $value, $apiUrl);
         }
 
