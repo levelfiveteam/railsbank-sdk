@@ -1,10 +1,15 @@
-# Railsbank PHP SDK Kit
+Railsbank PHP SDK Kit
+==========
+
+This is the Railsbank integration using PHP.
+
+<sub>This repository is actively used in projects, and we will be maintaining it regularly.</sub>
 
 [![Build Status](https://travis-ci.com/levelfiveteam/railsbank-sdk.svg?token=42A9e8Yz9HCHugYVWyzW&branch=master)](https://travis-ci.com/levelfiveteam/railsbank-sdk)
-
-
-This repository is actively used in projects, and we will be maintaining it regularly.
-
+[![Total Downloads](https://poser.pugx.org/levelfiveteam/railsbank-sdk/downloads.png)](https://packagist.org/packages/levelfiveteam/railsbank-sdk)
+[![Latest Stable Version](https://poser.pugx.org/levelfiveteam/railsbank-sdk/v/stable.png)](https://packagist.org/packages/levelfiveteam/railsbank-sdk)
+[![Latest Unstable Version](https://poser.pugx.org/levelfiveteam/railsbank-sdk/v/unstable.png)](https://packagist.org/packages/levelfiveteam/railsbank-sdk)
+[![License](https://poser.pugx.org/levelfiveteam/railsbank-sdk/license.png)](https://packagist.org/packages/levelfiveteam/railsbank-sdk)
 
 ### Licence
 You are free to reuse and adapt this content with credit, for non-commercial purposes.  Please review License for further information.
@@ -78,8 +83,11 @@ POST | Command\Transaction\CreateTransaction
 POST | Command\Card\CreateCard
 POST | Command\Card\ActivateCard
 
-## Improvements
 
-We are looking to add more queries and commands to the service after this phase.  
+Submitting bugs and feature requests
+------------------------------------
 
-Create an issue if you have any problems via Github.
+Bugs and feature requests are tracked on [GitHub](https://github.com/levelfiveteam/railsbank-sdk/issues).
+
+We are actively updating the SDK Kit.
+
