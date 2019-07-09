@@ -1,9 +1,9 @@
 <?php
 require_once '../vendor/autoload.php';
 
-use LevelFiveTeam\Railsbank\Command\Customer\Ledger\CloseLedger;
-use LevelFiveTeam\Railsbank\Entity\Customer\Ledger;
-use LevelFiveTeam\Railsbank\Railsbank;
+use Railsbank\Command\Customer\Ledger\CloseLedger;
+use Railsbank\Entity\Customer\Ledger;
+use Railsbank\Railsbank;
 
 $ledgerId = $argv[1];
 

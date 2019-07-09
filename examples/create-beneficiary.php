@@ -1,8 +1,8 @@
 <?php
 require_once '../vendor/autoload.php';
 
-use LevelFiveTeam\Railsbank\Command\Beneficiary\CreateBeneficiary;
-use LevelFiveTeam\Railsbank\Railsbank;
+use Railsbank\Command\Beneficiary\CreateBeneficiary;
+use Railsbank\Railsbank;
 
 $railsbank = new Railsbank('demo.config.php', 'live_account');
 
@@ -14,7 +14,7 @@ $command = new CreateBeneficiary(
     ]
 );
 
-/** @var \LevelFiveTeam\Railsbank\Entity\Beneficiary\BeneficiaryId $beneficiary */
+/** @var \Railsbank\Entity\Beneficiary\BeneficiaryId $beneficiary */
 $beneficiary = $railsbank->handle($command);
 
 echo PHP_EOL . 'Your beneficiary id is: ' . $beneficiary->getBeneficiaryId();

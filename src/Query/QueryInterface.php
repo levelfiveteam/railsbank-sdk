@@ -1,6 +1,6 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\Query;
+namespace Railsbank\Query;
 
 interface QueryInterface
 {

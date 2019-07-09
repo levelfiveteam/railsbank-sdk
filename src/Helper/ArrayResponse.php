@@ -1,5 +1,5 @@
 <?php
-namespace LevelFiveTeam\Railsbank\Helper;
+namespace Railsbank\Helper;
 
 class ArrayResponse
 {

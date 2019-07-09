@@ -1,20 +1,20 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\QueryHandler\Customer;
+namespace Railsbank\QueryHandler\Customer;
 
-use LevelFiveTeam\Railsbank\Handler;
-use LevelFiveTeam\Railsbank\Query\Customer\GetEndusers;
-use LevelFiveTeam\Railsbank\RailsbankClient;
+use Railsbank\Handler;
+use Railsbank\Query\Customer\GetEndusers;
+use Railsbank\RailsbankClient;
 
 /**
  * Class GetEndusersHandler
- * @package LevelFiveTeam\Railsbank\Customer\GetQueryHandler
+ * @package Railsbank\Customer\GetQueryHandler
  */
 class GetEndusersHandler extends Handler
 {
     /**
      * @param GetEndusers $command
-     * @return \LevelFiveTeam\Railsbank\Entity\EntityInterface|string|null
+     * @return \Railsbank\Entity\EntityInterface|string|null
      * @throws \Exception
      */
     public function handleGetEndusers(GetEndusers $command)

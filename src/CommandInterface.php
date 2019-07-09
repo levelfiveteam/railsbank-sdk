@@ -1,6 +1,6 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank;
+namespace Railsbank;
 
 interface CommandInterface
 {

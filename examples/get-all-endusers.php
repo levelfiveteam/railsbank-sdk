@@ -1,8 +1,8 @@
 <?php
 require_once '../vendor/autoload.php';
 
-use LevelFiveTeam\Railsbank\Query\Customer\GetEndusers;
-use LevelFiveTeam\Railsbank\Railsbank;
+use Railsbank\Query\Customer\GetEndusers;
+use Railsbank\Railsbank;
 
 // Store Railsbank in a DI
 try {

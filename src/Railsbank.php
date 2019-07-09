@@ -1,14 +1,14 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank;
+namespace Railsbank;
 
-use LevelFiveTeam\Railsbank\Exception\InvalidConfigException;
+use Railsbank\Exception\InvalidConfigException;
 
 /**
  * This is the service that will simplify the commands (and act as a controller)
  *
  * Class Railsbank
- * @package LevelFiveTeam\Railsbank
+ * @package Railsbank
  */
 class Railsbank
 {

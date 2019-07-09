@@ -1,13 +1,13 @@
 <?php
-namespace LevelFiveTeam\Railsbank\Entity\Customer;
+namespace Railsbank\Entity\Customer;
 
-use LevelFiveTeam\Railsbank\Entity\Entity;
-use LevelFiveTeam\Railsbank\Helper\ArrayResponse;
-use LevelFiveTeam\Railsbank\Entity\EntityInterface;
+use Railsbank\Entity\Entity;
+use Railsbank\Helper\ArrayResponse;
+use Railsbank\Entity\EntityInterface;
 
 /**
  * Class GetLedger
- * @package LevelFiveTeam\Railsbank\Entity\Customer\GetLedger
+ * @package Railsbank\Entity\Customer\GetLedger
  */
 class GetLedger extends Entity implements EntityInterface
 {

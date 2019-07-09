@@ -1,15 +1,15 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank;
+namespace Railsbank;
 
-use LevelFiveTeam\Railsbank\Exception\RailsbankConfigurationMissingException;
+use Railsbank\Exception\RailsbankConfigurationMissingException;
 use Zend\Config\Config;
 use Zend\Config\Factory;
-use LevelFiveTeam\Railsbank\Helper\RailsbankConfigValidator;
+use Railsbank\Helper\RailsbankConfigValidator;
 
 /**
  * Class ConfigServiceFactory
- * @package LevelFiveTeam\Railsbank
+ * @package Railsbank
  */
 class ConfigServiceFactory
 {

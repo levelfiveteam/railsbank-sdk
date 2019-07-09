@@ -1,13 +1,13 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\Command\Customer\Ledger;
+namespace Railsbank\Command\Customer\Ledger;
 
-use LevelFiveTeam\Railsbank\Command;
-use LevelFiveTeam\Railsbank\CommandInterface;
+use Railsbank\Command;
+use Railsbank\CommandInterface;
 
 /**
  * Class CreateLedger
- * @package LevelFiveTeam\Railsbank\Command\Customer\Ledger
+ * @package Railsbank\Command\Customer\Ledger
  */
 class CreateLedger extends Command implements CommandInterface
 {

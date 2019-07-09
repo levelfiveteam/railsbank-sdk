@@ -1,8 +1,8 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\Exception;
+namespace Railsbank\Exception;
 
-use LevelFiveTeam\Railsbank\Command\CommandInterface;
+use Railsbank\Command\CommandInterface;
 
 class EntityNotFoundException extends \Exception
 {

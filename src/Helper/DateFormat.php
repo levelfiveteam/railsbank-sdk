@@ -1,11 +1,11 @@
 <?php
-namespace LevelFiveTeam\Railsbank\Helper;
+namespace Railsbank\Helper;
 
 /**
  * Centralise date formatting for Railsbank API
  *
  * Class DateFormat
- * @package LevelFiveTeam\Railsbank\Helper
+ * @package Railsbank\Helper
  */
 class DateFormat
 {

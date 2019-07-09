@@ -1,24 +1,24 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\QueryHandler\Transaction;
+namespace Railsbank\QueryHandler\Transaction;
 
-use LevelFiveTeam\Railsbank\Entity\Transaction\DetailedTransaction;
-use LevelFiveTeam\Railsbank\Handler;
-use LevelFiveTeam\Railsbank\Query\Transaction\GetTransaction;
-use LevelFiveTeam\Railsbank\Query\Transaction\GetTransactions;
-use LevelFiveTeam\Railsbank\Entity\Transaction\Transactions;
-use LevelFiveTeam\Railsbank\Entity\Transaction\Transaction;
-use LevelFiveTeam\Railsbank\RailsbankClient;
+use Railsbank\Entity\Transaction\DetailedTransaction;
+use Railsbank\Handler;
+use Railsbank\Query\Transaction\GetTransaction;
+use Railsbank\Query\Transaction\GetTransactions;
+use Railsbank\Entity\Transaction\Transactions;
+use Railsbank\Entity\Transaction\Transaction;
+use Railsbank\RailsbankClient;
 
 /**
  * Class GetTransactionsHandler
- * @package LevelFiveTeam\Railsbank\Customer\GetQueryHandler
+ * @package Railsbank\Customer\GetQueryHandler
  */
 class GetTransactionsHandler extends Handler
 {
     /**
      * @param GetTransactions $command
-     * @return \LevelFiveTeam\Railsbank\Entity\Transaction\Transactions
+     * @return \Railsbank\Entity\Transaction\Transactions
      * @throws \Exception
      */
     public function handleGetTransactions(GetTransactions $command)

@@ -1,20 +1,20 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\QueryHandler\Version;
+namespace Railsbank\QueryHandler\Version;
 
-use LevelFiveTeam\Railsbank\Handler;
-use LevelFiveTeam\Railsbank\RailsbankClient;
-use LevelFiveTeam\Railsbank\Query\Version\GetVersion;
+use Railsbank\Handler;
+use Railsbank\RailsbankClient;
+use Railsbank\Query\Version\GetVersion;
 
 /**
  * Class GetVersionHandler
- * @package LevelFiveTeam\Railsbank\QueryHandler\Version
+ * @package Railsbank\QueryHandler\Version
  */
 class GetVersionHandler extends Handler
 {
     /**
      * @param GetVersion $command
-     * @return \LevelFiveTeam\Railsbank\Entity\EntityInterface|null
+     * @return \Railsbank\Entity\EntityInterface|null
      */
     public function handleGetVersion(GetVersion $command)
     {

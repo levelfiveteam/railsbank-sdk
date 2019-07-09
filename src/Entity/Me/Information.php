@@ -1,13 +1,13 @@
 <?php
-namespace LevelFiveTeam\Railsbank\Entity\Me;
+namespace Railsbank\Entity\Me;
 
-use LevelFiveTeam\Railsbank\Entity\Entity;
-use LevelFiveTeam\Railsbank\Entity\EntityInterface;
-use LevelFiveTeam\Railsbank\Helper\ArrayResponse;
+use Railsbank\Entity\Entity;
+use Railsbank\Entity\EntityInterface;
+use Railsbank\Helper\ArrayResponse;
 
 /**
  * Class VersionNumber
- * @package LevelFiveTeam\Railsbank\Entity\Me\Information
+ * @package Railsbank\Entity\Me\Information
  */
 class Information extends Entity implements EntityInterface
 {

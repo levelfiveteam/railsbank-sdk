@@ -1,10 +1,10 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\QueryHandler\Card;
+namespace Railsbank\QueryHandler\Card;
 
-use LevelFiveTeam\Railsbank\Handler;
-use LevelFiveTeam\Railsbank\RailsbankClient;
-use LevelFiveTeam\Railsbank\Query\Card\GetPin;
+use Railsbank\Handler;
+use Railsbank\RailsbankClient;
+use Railsbank\Query\Card\GetPin;
 
 /**
  * Class GetPinHandler
@@ -13,7 +13,7 @@ class GetPinHandler extends Handler
 {
     /**
      * @param GetPin $command
-     * @return \LevelFiveTeam\Railsbank\Entity\EntityInterface|string|null
+     * @return \Railsbank\Entity\EntityInterface|string|null
      * @throws \Exception
      */
     public function handleGetPin(GetPin $command)

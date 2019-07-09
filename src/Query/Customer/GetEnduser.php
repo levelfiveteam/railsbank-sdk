@@ -1,9 +1,9 @@
 <?php
-namespace LevelFiveTeam\Railsbank\Query\Customer;
+namespace Railsbank\Query\Customer;
 
-use LevelFiveTeam\Railsbank\Command;
-use LevelFiveTeam\Railsbank\CommandInterface;
-use LevelFiveTeam\Railsbank\Query\QueryInterface;
+use Railsbank\Command;
+use Railsbank\CommandInterface;
+use Railsbank\Query\QueryInterface;
 
 class GetEnduser extends Command implements CommandInterface, QueryInterface
 {

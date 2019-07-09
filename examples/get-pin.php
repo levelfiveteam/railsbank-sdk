@@ -1,9 +1,9 @@
 <?php
 require_once '../vendor/autoload.php';
 
-use LevelFiveTeam\Railsbank\Query\Card\GetPin;
-use LevelFiveTeam\Railsbank\Entity\Card\Pin;
-use LevelFiveTeam\Railsbank\Railsbank;
+use Railsbank\Query\Card\GetPin;
+use Railsbank\Entity\Card\Pin;
+use Railsbank\Railsbank;
 
 $cardId = $argv[1];
 

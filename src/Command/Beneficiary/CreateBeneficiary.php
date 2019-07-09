@@ -1,13 +1,13 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\Command\Beneficiary;
+namespace Railsbank\Command\Beneficiary;
 
-use LevelFiveTeam\Railsbank\Command;
-use LevelFiveTeam\Railsbank\CommandInterface;
+use Railsbank\Command;
+use Railsbank\CommandInterface;
 
 /**
  * Class CreateBeneficiary
- * @package LevelFiveTeam\Railsbank\Command\Beneficiary\CreateBeneficiary
+ * @package Railsbank\Command\Beneficiary\CreateBeneficiary
  */
 class CreateBeneficiary extends Command implements CommandInterface
 {

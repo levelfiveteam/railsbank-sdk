@@ -1,8 +1,8 @@
 <?php
 require_once '../vendor/autoload.php';
 
-use LevelFiveTeam\Railsbank\Command\Customer\EndUsers\CreatePerson;
-use LevelFiveTeam\Railsbank\Railsbank;
+use Railsbank\Command\Customer\EndUsers\CreatePerson;
+use Railsbank\Railsbank;
 
 // Store Railsbank in a DI
 try {

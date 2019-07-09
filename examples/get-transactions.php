@@ -1,8 +1,8 @@
 <?php
 require_once '../vendor/autoload.php';
 
-use LevelFiveTeam\Railsbank\Query\Transaction\GetTransactions;
-use LevelFiveTeam\Railsbank\Railsbank;
+use Railsbank\Query\Transaction\GetTransactions;
+use Railsbank\Railsbank;
 
 $ledgerId = $argv[1];
 
@@ -15,7 +15,7 @@ try {
 }
 
 
-/** @var \LevelFiveTeam\Railsbank\Entity\Transaction\Transactions $response */
+/** @var \Railsbank\Entity\Transaction\Transactions $response */
 $response = $railsbank->handle(new GetTransactions(['ledger_id' => $ledgerId]));
 
 var_dump($response);

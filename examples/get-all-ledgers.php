@@ -2,8 +2,8 @@
 require_once '../vendor/autoload.php';
 
 
-use LevelFiveTeam\Railsbank\Query\Customer\GetLedgers;
-use LevelFiveTeam\Railsbank\Railsbank;
+use Railsbank\Query\Customer\GetLedgers;
+use Railsbank\Railsbank;
 
 // Store Railsbank in a DI
 try {

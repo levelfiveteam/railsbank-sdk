@@ -1,10 +1,10 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank;
+namespace Railsbank;
 
 /**
  * Class Handler
- * @package LevelFiveTeam\Railsbank
+ * @package Railsbank
  */
 abstract class Handler
 {

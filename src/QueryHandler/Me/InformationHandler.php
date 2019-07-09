@@ -1,14 +1,14 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\QueryHandler\Me;
+namespace Railsbank\QueryHandler\Me;
 
-use LevelFiveTeam\Railsbank\Handler;
-use LevelFiveTeam\Railsbank\RailsbankClient;
-use LevelFiveTeam\Railsbank\Query\Me\Information;
+use Railsbank\Handler;
+use Railsbank\RailsbankClient;
+use Railsbank\Query\Me\Information;
 
 /**
  * Class InformationHandler
- * @package LevelFiveTeam\Railsbank\QueryHandler\Me
+ * @package Railsbank\QueryHandler\Me
  */
 class InformationHandler extends Handler
 {
@@ -21,7 +21,7 @@ class InformationHandler extends Handler
         $client = new RailsbankClient($command->getRailsbankConfig());
 
         try {
-            /** @var \LevelFiveTeam\Railsbank\Entity\Me\Information $version */
+            /** @var \Railsbank\Entity\Me\Information $version */
             $version = $client->handleApiCall($command);
             return $version;
         } catch (\Exception $e) {

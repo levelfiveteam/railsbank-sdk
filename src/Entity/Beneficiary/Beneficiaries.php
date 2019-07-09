@@ -1,13 +1,13 @@
 <?php
-namespace LevelFiveTeam\Railsbank\Entity\Beneficiary;
+namespace Railsbank\Entity\Beneficiary;
 
-use LevelFiveTeam\Railsbank\Entity\Card\Card;
-use LevelFiveTeam\Railsbank\Entity\Entity;
-use LevelFiveTeam\Railsbank\Entity\EntityInterface;
+use Railsbank\Entity\Card\Card;
+use Railsbank\Entity\Entity;
+use Railsbank\Entity\EntityInterface;
 
 /**
  * Class Beneficiaries
- * @package LevelFiveTeam\Railsbank\Entity\Beneficiary
+ * @package Railsbank\Entity\Beneficiary
  */
 class Beneficiaries extends Entity implements EntityInterface
 {

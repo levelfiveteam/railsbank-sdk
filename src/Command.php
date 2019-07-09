@@ -1,5 +1,5 @@
 <?php
-namespace LevelFiveTeam\Railsbank;
+namespace Railsbank;
 
 use Zend\InputFilter\Factory;
 use Zend\InputFilter\InputFilter;

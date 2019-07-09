@@ -1,20 +1,20 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\CommandHandler\Customer\Ledger;
+namespace Railsbank\CommandHandler\Customer\Ledger;
 
-use LevelFiveTeam\Railsbank\Handler;
-use LevelFiveTeam\Railsbank\RailsbankClient;
-use LevelFiveTeam\Railsbank\Command\Customer\Ledger\CreateLedger;
+use Railsbank\Handler;
+use Railsbank\RailsbankClient;
+use Railsbank\Command\Customer\Ledger\CreateLedger;
 
 /**
  * Class CreateLedgerHandler
- * @package LevelFiveTeam\Railsbank\CommandHandler\Customer\Ledger
+ * @package Railsbank\CommandHandler\Customer\Ledger
  */
 class CreateLedgerHandler extends Handler
 {
     /**
      * @param CreateLedger $command
-     * @return \LevelFiveTeam\Railsbank\Entity\EntityInterface|null
+     * @return \Railsbank\Entity\EntityInterface|null
      */
     public function handleCreateLedger(CreateLedger $command)
     {

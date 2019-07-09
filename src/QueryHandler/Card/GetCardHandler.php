@@ -1,20 +1,20 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\QueryHandler\Card;
+namespace Railsbank\QueryHandler\Card;
 
-use LevelFiveTeam\Railsbank\Handler;
-use LevelFiveTeam\Railsbank\Query\Card\GetCard;
-use LevelFiveTeam\Railsbank\RailsbankClient;
+use Railsbank\Handler;
+use Railsbank\Query\Card\GetCard;
+use Railsbank\RailsbankClient;
 
 /**
  * Class GetCardsHandler
- * @package LevelFiveTeam\Railsbank\Card\GetCardsHandler
+ * @package Railsbank\Card\GetCardsHandler
  */
 class GetCardHandler extends Handler
 {
     /**
      * @param GetCard $command
-     * @return \LevelFiveTeam\Railsbank\Entity\EntityInterface|string|null
+     * @return \Railsbank\Entity\EntityInterface|string|null
      * @throws \Exception
      */
     public function handleGetCard(GetCard $command)

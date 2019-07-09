@@ -1,9 +1,9 @@
 <?php
 require_once '../vendor/autoload.php';
 
-use LevelFiveTeam\Railsbank\Command\Customer\Ledger\CreateLedger;
-use LevelFiveTeam\Railsbank\Query\Customer\GetLedger;
-use LevelFiveTeam\Railsbank\Railsbank;
+use Railsbank\Command\Customer\Ledger\CreateLedger;
+use Railsbank\Query\Customer\GetLedger;
+use Railsbank\Railsbank;
 
 // Store Railsbank in a DI
 try {
@@ -14,14 +14,14 @@ try {
 }
 
 // Create new account -= PayrNet-GBP-1 in live, Examplebank-GBP-1 in test
-/** @var \LevelFiveTeam\Railsbank\Entity\Customer\Ledger $ledger */
+/** @var \Railsbank\Entity\Customer\Ledger $ledger */
 $newLedger = $railsbank->handle(new CreateLedger(['holder_id' => '5d0cda91-6296-4787-b807-3fdeed13f411', 'partner_product' => 'PayrNet-GBP-1']));
 $ledgerId = $newLedger->getLedgerId();
 
 echo PHP_EOL . 'Your ledger id is: ' . $ledgerId;
 
 // Get new account
-/** @var \LevelFiveTeam\Railsbank\Entity\Customer\GetLedger $ledger */
+/** @var \Railsbank\Entity\Customer\GetLedger $ledger */
 $ledger = $railsbank->handle(new GetLedger(['ledger_id' => $ledgerId]));
 
 if ($ledger->isLedgerStatusOk()) {

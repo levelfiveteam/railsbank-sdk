@@ -1,12 +1,12 @@
 <?php
-namespace LevelFiveTeam\Railsbank\Entity\Transaction;
+namespace Railsbank\Entity\Transaction;
 
-use LevelFiveTeam\Railsbank\Entity\Entity;
-use LevelFiveTeam\Railsbank\Entity\EntityInterface;
+use Railsbank\Entity\Entity;
+use Railsbank\Entity\EntityInterface;
 
 /**
  * Class Transactions
- * @package LevelFiveTeam\Railsbank\Entity\Transaction
+ * @package Railsbank\Entity\Transaction
  */
 class Transactions extends Entity implements EntityInterface
 {

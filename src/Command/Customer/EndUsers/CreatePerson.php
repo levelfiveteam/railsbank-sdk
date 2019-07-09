@@ -1,10 +1,10 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\Command\Customer\EndUsers;
+namespace Railsbank\Command\Customer\EndUsers;
 
-use LevelFiveTeam\Railsbank\Command;
-use LevelFiveTeam\Railsbank\CommandInterface;
-use LevelFiveTeam\Railsbank\Helper\DateFormat;
+use Railsbank\Command;
+use Railsbank\CommandInterface;
+use Railsbank\Helper\DateFormat;
 
 class CreatePerson extends Command implements CommandInterface
 {

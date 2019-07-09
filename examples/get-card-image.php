@@ -1,9 +1,9 @@
 <?php
 require_once '../vendor/autoload.php';
 
-use LevelFiveTeam\Railsbank\Entity\Card\CardImage;
-use LevelFiveTeam\Railsbank\Query\Card\GetCardImageUrl;
-use LevelFiveTeam\Railsbank\Railsbank;
+use Railsbank\Entity\Card\CardImage;
+use Railsbank\Query\Card\GetCardImageUrl;
+use Railsbank\Railsbank;
 
 // Store Railsbank in a DI
 try {

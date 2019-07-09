@@ -1,20 +1,20 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\CommandHandler\Beneficiary;
+namespace Railsbank\CommandHandler\Beneficiary;
 
-use LevelFiveTeam\Railsbank\Handler;
-use LevelFiveTeam\Railsbank\RailsbankClient;
-use LevelFiveTeam\Railsbank\Command\Beneficiary\CreateBeneficiary;
+use Railsbank\Handler;
+use Railsbank\RailsbankClient;
+use Railsbank\Command\Beneficiary\CreateBeneficiary;
 
 /**
  * Class CreateBeneficiaryHandler
- * @package LevelFiveTeam\Railsbank\CommandHandler\BeneficiaryHandler
+ * @package Railsbank\CommandHandler\BeneficiaryHandler
  */
 class CreateBeneficiaryHandler extends Handler
 {
     /**
      * @param CreateBeneficiary $command
-     * @return \LevelFiveTeam\Railsbank\Entity\EntityInterface|null
+     * @return \Railsbank\Entity\EntityInterface|null
      */
     public function handleCreateBeneficiary(CreateBeneficiary $command)
     {

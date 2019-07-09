@@ -10,6 +10,7 @@ This is the Railsbank integration using PHP.
 [![Latest Stable Version](https://poser.pugx.org/levelfiveteam/railsbank-sdk/v/stable.png)](https://packagist.org/packages/levelfiveteam/railsbank-sdk)
 [![Latest Unstable Version](https://poser.pugx.org/levelfiveteam/railsbank-sdk/v/unstable.png)](https://packagist.org/packages/levelfiveteam/railsbank-sdk)
 [![License](https://poser.pugx.org/levelfiveteam/railsbank-sdk/license.png)](https://packagist.org/packages/levelfiveteam/railsbank-sdk)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](paypal@level5websites.com)
 
 ### Licence
 You are free to reuse and adapt this content with credit, for non-commercial purposes.  Please review License for further information.

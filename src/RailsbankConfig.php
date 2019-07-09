@@ -1,10 +1,10 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank;
+namespace Railsbank;
 
 use Zend\Config\Config;
-use LevelFiveTeam\Railsbank\Exception\UnspecifiedModeException;
-use LevelFiveTeam\Railsbank\Exception\RailsbankConfigurationMissingException;
+use Railsbank\Exception\UnspecifiedModeException;
+use Railsbank\Exception\RailsbankConfigurationMissingException;
 
 class RailsbankConfig
 {

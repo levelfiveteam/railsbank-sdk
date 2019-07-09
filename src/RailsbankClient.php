@@ -1,13 +1,13 @@
 <?php
-namespace LevelFiveTeam\Railsbank;
+namespace Railsbank;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\RequestOptions;
 use Zend\Config\Config;
-use LevelFiveTeam\Railsbank\Entity\EntityInterface;
-use LevelFiveTeam\Railsbank\Exception\EntityNotExistException;
-use LevelFiveTeam\Railsbank\Exception\EntityNotFoundException;
-use LevelFiveTeam\Railsbank\Exception\EndpointNotFoundException;
+use Railsbank\Entity\EntityInterface;
+use Railsbank\Exception\EntityNotExistException;
+use Railsbank\Exception\EntityNotFoundException;
+use Railsbank\Exception\EndpointNotFoundException;
 
 class RailsbankClient
 {

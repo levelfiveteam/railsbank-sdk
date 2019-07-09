@@ -1,6 +1,6 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\Exception;
+namespace Railsbank\Exception;
 
 class InvalidConfigException extends \Exception
 {

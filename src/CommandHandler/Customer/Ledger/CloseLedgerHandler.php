@@ -1,10 +1,10 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\CommandHandler\Customer\Ledger;
+namespace Railsbank\CommandHandler\Customer\Ledger;
 
-use LevelFiveTeam\Railsbank\Handler;
-use LevelFiveTeam\Railsbank\RailsbankClient;
-use LevelFiveTeam\Railsbank\Command\Customer\Ledger\CloseLedger;
+use Railsbank\Handler;
+use Railsbank\RailsbankClient;
+use Railsbank\Command\Customer\Ledger\CloseLedger;
 
 /**
  * Class CloseLedgerHandler
@@ -13,7 +13,7 @@ class CloseLedgerHandler extends Handler
 {
     /**
      * @param CloseLedger $command
-     * @return \LevelFiveTeam\Railsbank\Entity\EntityInterface|null
+     * @return \Railsbank\Entity\EntityInterface|null
      */
     public function handleCloseLedger(CloseLedger $command)
     {

@@ -1,5 +1,5 @@
 <?php
-namespace LevelFiveTeam\Railsbank\Command;
+namespace Railsbank\Command;
 
 use Zend\Config\Factory;
 

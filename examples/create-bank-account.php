@@ -1,10 +1,10 @@
 <?php
 require_once '../vendor/autoload.php';
 
-use LevelFiveTeam\Railsbank\Command\Customer\Ledger\CreateLedger;
-use LevelFiveTeam\Railsbank\Command\Customer\EndUsers\CreatePerson;
-use LevelFiveTeam\Railsbank\Query\Customer\GetLedger;
-use LevelFiveTeam\Railsbank\Railsbank;
+use Railsbank\Command\Customer\Ledger\CreateLedger;
+use Railsbank\Command\Customer\EndUsers\CreatePerson;
+use Railsbank\Query\Customer\GetLedger;
+use Railsbank\Railsbank;
 
 $railsbank = new Railsbank('demo.config.php', 'play_live');
 

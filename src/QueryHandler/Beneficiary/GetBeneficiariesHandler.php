@@ -1,15 +1,15 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\QueryHandler\Beneficiary;
+namespace Railsbank\QueryHandler\Beneficiary;
 
-use LevelFiveTeam\Railsbank\Entity\Beneficiary\Beneficiary;
-use LevelFiveTeam\Railsbank\Handler;
-use LevelFiveTeam\Railsbank\Query\Beneficiary\GetBeneficiaries;
-use LevelFiveTeam\Railsbank\RailsbankClient;
+use Railsbank\Entity\Beneficiary\Beneficiary;
+use Railsbank\Handler;
+use Railsbank\Query\Beneficiary\GetBeneficiaries;
+use Railsbank\RailsbankClient;
 
 /**
  * Class GetBeneficiariesHandler
- * @package LevelFiveTeam\Railsbank\QueryHandler\Beneficiary
+ * @package Railsbank\QueryHandler\Beneficiary
  */
 class GetBeneficiariesHandler extends Handler
 {

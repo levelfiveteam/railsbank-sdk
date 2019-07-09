@@ -1,13 +1,13 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\Command\Card;
+namespace Railsbank\Command\Card;
 
-use LevelFiveTeam\Railsbank\Command;
-use LevelFiveTeam\Railsbank\CommandInterface;
+use Railsbank\Command;
+use Railsbank\CommandInterface;
 
 /**
  * Class ActivateCard
- * @package LevelFiveTeam\Railsbank\Command\Card\ActivateCard
+ * @package Railsbank\Command\Card\ActivateCard
  */
 class ActivateCard extends Command implements CommandInterface
 {

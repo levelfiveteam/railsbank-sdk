@@ -1,8 +1,8 @@
 <?php
-namespace LevelFiveTeam\Railsbank\Query\Version;
+namespace Railsbank\Query\Version;
 
-use LevelFiveTeam\Railsbank\Command;
-use LevelFiveTeam\Railsbank\CommandInterface;
+use Railsbank\Command;
+use Railsbank\CommandInterface;
 
 class GetVersion extends Command implements CommandInterface
 {

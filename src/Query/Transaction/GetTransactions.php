@@ -1,9 +1,9 @@
 <?php
-namespace LevelFiveTeam\Railsbank\Query\Transaction;
+namespace Railsbank\Query\Transaction;
 
-use LevelFiveTeam\Railsbank\Command;
-use LevelFiveTeam\Railsbank\CommandInterface;
-use LevelFiveTeam\Railsbank\Query\QueryInterface;
+use Railsbank\Command;
+use Railsbank\CommandInterface;
+use Railsbank\Query\QueryInterface;
 
 class GetTransactions extends Command implements CommandInterface, QueryInterface
 {

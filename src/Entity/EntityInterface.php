@@ -1,6 +1,6 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\Entity;
+namespace Railsbank\Entity;
 
 interface EntityInterface
 {

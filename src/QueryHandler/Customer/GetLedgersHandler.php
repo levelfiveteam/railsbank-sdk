@@ -1,14 +1,14 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\QueryHandler\Customer;
+namespace Railsbank\QueryHandler\Customer;
 
-use LevelFiveTeam\Railsbank\Handler;
-use LevelFiveTeam\Railsbank\RailsbankClient;
-use LevelFiveTeam\Railsbank\Query\Customer\GetLedgers;
+use Railsbank\Handler;
+use Railsbank\RailsbankClient;
+use Railsbank\Query\Customer\GetLedgers;
 
 /**
  * Class GetLedgersHandler
- * @package LevelFiveTeam\Railsbank\Customer\GetQueryHandler
+ * @package Railsbank\Customer\GetQueryHandler
  */
 class GetLedgersHandler extends Handler
 {
@@ -21,7 +21,7 @@ class GetLedgersHandler extends Handler
         $client = new RailsbankClient($command->getRailsbankConfig());
 
         try {
-            /** @var \LevelFiveTeam\Railsbank\Entity\Customer\GetLedgers $version */
+            /** @var \Railsbank\Entity\Customer\GetLedgers $version */
             $version = $client->handleApiCall($command, 'GET', true);
             return $version;
         } catch (\Exception $e) {

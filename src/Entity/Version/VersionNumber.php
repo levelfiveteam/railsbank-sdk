@@ -1,13 +1,13 @@
 <?php
-namespace LevelFiveTeam\Railsbank\Entity\Version;
+namespace Railsbank\Entity\Version;
 
-use LevelFiveTeam\Railsbank\Entity\Entity;
-use LevelFiveTeam\Railsbank\Entity\EntityInterface;
-use LevelFiveTeam\Railsbank\Helper\ArrayResponse;
+use Railsbank\Entity\Entity;
+use Railsbank\Entity\EntityInterface;
+use Railsbank\Helper\ArrayResponse;
 
 /**
  * Class VersionNumber
- * @package LevelFiveTeam\Railsbank\Entity\Version
+ * @package Railsbank\Entity\Version
  */
 class VersionNumber extends Entity implements EntityInterface
 {

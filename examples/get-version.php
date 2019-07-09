@@ -1,8 +1,8 @@
 <?php
 require_once '../vendor/autoload.php';
 
-use LevelFiveTeam\Railsbank\Query\Version\GetVersion;
-use LevelFiveTeam\Railsbank\Railsbank;
+use Railsbank\Query\Version\GetVersion;
+use Railsbank\Railsbank;
 
 // Store Railsbank in a DI
 try {

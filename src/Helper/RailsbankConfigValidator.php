@@ -1,11 +1,11 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\Helper;
+namespace Railsbank\Helper;
 
-use LevelFiveTeam\Railsbank\Exception\RailsbankConfigurationMissingValueException;
+use Railsbank\Exception\RailsbankConfigurationMissingValueException;
 use Zend\Config\Config;
-use LevelFiveTeam\Railsbank\Exception\UnspecifiedModeException;
-use LevelFiveTeam\Railsbank\Exception\RailsbankConfigurationMissingException;
+use Railsbank\Exception\UnspecifiedModeException;
+use Railsbank\Exception\RailsbankConfigurationMissingException;
 
 class RailsbankConfigValidator
 {

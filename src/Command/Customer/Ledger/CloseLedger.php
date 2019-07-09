@@ -1,9 +1,9 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\Command\Customer\Ledger;
+namespace Railsbank\Command\Customer\Ledger;
 
-use LevelFiveTeam\Railsbank\Command;
-use LevelFiveTeam\Railsbank\CommandInterface;
+use Railsbank\Command;
+use Railsbank\CommandInterface;
 
 /**
  * Class CloseLedger

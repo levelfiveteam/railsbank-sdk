@@ -1,8 +1,8 @@
 <?php
 require_once '../vendor/autoload.php';
 
-use LevelFiveTeam\Railsbank\Query\Customer\GetLedger;
-use LevelFiveTeam\Railsbank\Railsbank;
+use Railsbank\Query\Customer\GetLedger;
+use Railsbank\Railsbank;
 
 $ledgerId = $argv[1];
 

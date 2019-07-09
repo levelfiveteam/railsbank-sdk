@@ -1,20 +1,20 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\CommandHandler\Transaction;
+namespace Railsbank\CommandHandler\Transaction;
 
-use LevelFiveTeam\Railsbank\Handler;
-use LevelFiveTeam\Railsbank\RailsbankClient;
-use LevelFiveTeam\Railsbank\Command\Transaction\CreateTransaction;
+use Railsbank\Handler;
+use Railsbank\RailsbankClient;
+use Railsbank\Command\Transaction\CreateTransaction;
 
 /**
  * Class CreateTransactionHandler
- * @package LevelFiveTeam\Railsbank\CommandHandler\BeneficiaryHandler
+ * @package Railsbank\CommandHandler\BeneficiaryHandler
  */
 class CreateTransactionHandler extends Handler
 {
     /**
      * @param CreateTransaction $command
-     * @return \LevelFiveTeam\Railsbank\Entity\EntityInterface|null
+     * @return \Railsbank\Entity\EntityInterface|null
      */
     public function handleCreateTransaction(CreateTransaction $command)
     {

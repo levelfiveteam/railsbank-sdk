@@ -1,6 +1,6 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank;
+namespace Railsbank;
 
 use League\Container\Container;
 use League\Tactician\CommandBus;
@@ -12,7 +12,7 @@ use League\Tactician\Handler\MethodNameInflector\HandleClassNameInflector;
 
 /**
  * Class CommandBusFactory
- * @package LevelFiveTeam\Railsbank
+ * @package Railsbank
  */
 class CommandBusFactory
 {

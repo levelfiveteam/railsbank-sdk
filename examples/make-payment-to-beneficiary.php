@@ -1,9 +1,9 @@
 <?php
 require_once '../vendor/autoload.php';
 
-use LevelFiveTeam\Railsbank\Command\Transaction\CreateTransaction;
-use LevelFiveTeam\Railsbank\Entity\Transaction\TransactionId;
-use LevelFiveTeam\Railsbank\Railsbank;
+use Railsbank\Command\Transaction\CreateTransaction;
+use Railsbank\Entity\Transaction\TransactionId;
+use Railsbank\Railsbank;
 
 // Store Railsbank in a DI
 try {

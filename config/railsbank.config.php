@@ -1,8 +1,8 @@
 <?php
-use LevelFiveTeam\Railsbank\Query;
-use LevelFiveTeam\Railsbank\QueryHandler;
-use LevelFiveTeam\Railsbank\Command;
-use LevelFiveTeam\Railsbank\CommandHandler;
+use Railsbank\Query;
+use Railsbank\QueryHandler;
+use Railsbank\Command;
+use Railsbank\CommandHandler;
 
 /**
  * Configuration for Railsbank API
@@ -53,25 +53,25 @@ return [
         Command\Card\ActivateCard::class => CommandHandler\Card\ActivateCardHandler::class,
     ],
     'entity_map' => [
-        Query\Version\GetVersion::class => "LevelFiveTeam\\Railsbank\\Entity\\Version\\VersionNumber",
-        Query\Me\Information::class => "LevelFiveTeam\\Railsbank\\Entity\\Me\\Information",
-        Query\Customer\GetLedger::class => "LevelFiveTeam\\Railsbank\\Entity\\Customer\\GetLedger",
-        Query\Customer\GetEnduser::class => "LevelFiveTeam\\Railsbank\\Entity\\Customer\\EndUsers\\EndUser",
-        Query\Transaction\GetTransaction::class => "LevelFiveTeam\\Railsbank\\Entity\\Transaction\\DetailedTransaction",
-        Query\Transaction\GetTransactions::class => "LevelFiveTeam\\Railsbank\\Entity\\Transaction\\Transactions",
-        Query\Card\GetCards::class => "LevelFiveTeam\\Railsbank\\Entity\\Card\\Cards",
-        Query\Card\GetCardsByLedgerId::class => "LevelFiveTeam\\Railsbank\\Entity\\Card\\Cards",
-        Query\Card\GetCard::class => "LevelFiveTeam\\Railsbank\\Entity\\Card\\Card",
-        Query\Card\GetCardImageUrl::class => "LevelFiveTeam\\Railsbank\\Entity\\Card\\CardImage",
-        Query\Card\GetPin::class => "LevelFiveTeam\\Railsbank\\Entity\\Card\\Pin",
-        Query\Beneficiary\GetBeneficiaries::class => "LevelFiveTeam\\Railsbank\\Entity\\Beneficiary\\Beneficiaries",
+        Query\Version\GetVersion::class => "Railsbank\\Entity\\Version\\VersionNumber",
+        Query\Me\Information::class => "Railsbank\\Entity\\Me\\Information",
+        Query\Customer\GetLedger::class => "Railsbank\\Entity\\Customer\\GetLedger",
+        Query\Customer\GetEnduser::class => "Railsbank\\Entity\\Customer\\EndUsers\\EndUser",
+        Query\Transaction\GetTransaction::class => "Railsbank\\Entity\\Transaction\\DetailedTransaction",
+        Query\Transaction\GetTransactions::class => "Railsbank\\Entity\\Transaction\\Transactions",
+        Query\Card\GetCards::class => "Railsbank\\Entity\\Card\\Cards",
+        Query\Card\GetCardsByLedgerId::class => "Railsbank\\Entity\\Card\\Cards",
+        Query\Card\GetCard::class => "Railsbank\\Entity\\Card\\Card",
+        Query\Card\GetCardImageUrl::class => "Railsbank\\Entity\\Card\\CardImage",
+        Query\Card\GetPin::class => "Railsbank\\Entity\\Card\\Pin",
+        Query\Beneficiary\GetBeneficiaries::class => "Railsbank\\Entity\\Beneficiary\\Beneficiaries",
 
-        Command\Customer\EndUsers\CreatePerson::class => "LevelFiveTeam\\Railsbank\\Entity\\Customer\\EndUsers\\EndUserId",
-        Command\Customer\Ledger\CreateLedger::class => "LevelFiveTeam\\Railsbank\\Entity\\Customer\\Ledger",
-        Command\Customer\Ledger\CloseLedger::class => "LevelFiveTeam\\Railsbank\\Entity\\Customer\\Ledger",
-        Command\Beneficiary\CreateBeneficiary::class => "LevelFiveTeam\\Railsbank\\Entity\\Beneficiary\\BeneficiaryId",
-        Command\Transaction\CreateTransaction::class => "LevelFiveTeam\\Railsbank\\Entity\\Transaction\\TransactionId",
-        Command\Card\CreateCard::class => "LevelFiveTeam\\Railsbank\\Entity\\Card\\CardId",
+        Command\Customer\EndUsers\CreatePerson::class => "Railsbank\\Entity\\Customer\\EndUsers\\EndUserId",
+        Command\Customer\Ledger\CreateLedger::class => "Railsbank\\Entity\\Customer\\Ledger",
+        Command\Customer\Ledger\CloseLedger::class => "Railsbank\\Entity\\Customer\\Ledger",
+        Command\Beneficiary\CreateBeneficiary::class => "Railsbank\\Entity\\Beneficiary\\BeneficiaryId",
+        Command\Transaction\CreateTransaction::class => "Railsbank\\Entity\\Transaction\\TransactionId",
+        Command\Card\CreateCard::class => "Railsbank\\Entity\\Card\\CardId",
     ],
     'railsbank_http_url' => [
         Query\Version\GetVersion::class => '/v1/customer/version',

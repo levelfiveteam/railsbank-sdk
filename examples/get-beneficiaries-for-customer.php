@@ -1,8 +1,8 @@
 <?php
 require_once '../vendor/autoload.php';
 
-use LevelFiveTeam\Railsbank\Query\Beneficiary\GetBeneficiaries;
-use LevelFiveTeam\Railsbank\Railsbank;
+use Railsbank\Query\Beneficiary\GetBeneficiaries;
+use Railsbank\Railsbank;
 
 // Store Railsbank in a DI
 try {
@@ -12,10 +12,10 @@ try {
     die();
 }
 
-/** @var \LevelFiveTeam\Railsbank\Entity\Beneficiary\Beneficiaries $response */
+/** @var \Railsbank\Entity\Beneficiary\Beneficiaries $response */
 $response = $railsbank->handle(new GetBeneficiaries(['holder_id' => '5d0cddf5-092d-436e-94b5-64ea32e29035',]));
 
-/** @var \LevelFiveTeam\Railsbank\Entity\Beneficiary\Beneficiary $beneficiary */
+/** @var \Railsbank\Entity\Beneficiary\Beneficiary $beneficiary */
 foreach ($response->getBeneficiaries() as $beneficiary) {
     echo 'Beneficiary ID: ' . $beneficiary->getBeneficiaryId();
     echo PHP_EOL;

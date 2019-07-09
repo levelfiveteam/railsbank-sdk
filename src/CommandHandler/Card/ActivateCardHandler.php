@@ -1,20 +1,20 @@
 <?php
 
-namespace LevelFiveTeam\Railsbank\CommandHandler\Card;
+namespace Railsbank\CommandHandler\Card;
 
-use LevelFiveTeam\Railsbank\Command\Card\ActivateCard;
-use LevelFiveTeam\Railsbank\Handler;
-use LevelFiveTeam\Railsbank\RailsbankClient;
+use Railsbank\Command\Card\ActivateCard;
+use Railsbank\Handler;
+use Railsbank\RailsbankClient;
 
 /**
  * Class ActivateCardHandler
- * @package LevelFiveTeam\Railsbank\CommandHandler\Card
+ * @package Railsbank\CommandHandler\Card
  */
 class ActivateCardHandler extends Handler
 {
     /**
      * @param ActivateCard $command
-     * @return \LevelFiveTeam\Railsbank\Entity\EntityInterface|null
+     * @return \Railsbank\Entity\EntityInterface|null
      */
     public function handleActivateCard(ActivateCard $command)
     {

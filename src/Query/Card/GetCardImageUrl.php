@@ -1,9 +1,9 @@
 <?php
-namespace LevelFiveTeam\Railsbank\Query\Card;
+namespace Railsbank\Query\Card;
 
-use LevelFiveTeam\Railsbank\Command;
-use LevelFiveTeam\Railsbank\CommandInterface;
-use LevelFiveTeam\Railsbank\Query\QueryInterface;
+use Railsbank\Command;
+use Railsbank\CommandInterface;
+use Railsbank\Query\QueryInterface;
 
 class GetCardImageUrl extends Command implements CommandInterface, QueryInterface
 {
