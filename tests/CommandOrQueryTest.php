@@ -3,9 +3,9 @@
 namespace Test;
 
 use DomainException;
-use LevelFiveTeam\Railsbank\CommandInterface;
+use Railsbank\CommandInterface;
 use PHPUnit\Framework\TestCase;
-use LevelFiveTeam\Railsbank\Command;
+use Railsbank\Command;
 
 abstract class CommandOrQueryTest extends TestCase implements CommandOrQueryTestInterface
 {

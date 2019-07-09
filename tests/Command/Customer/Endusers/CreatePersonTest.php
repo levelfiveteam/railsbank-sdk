@@ -2,7 +2,7 @@
 
 namespace Test\Command\Customer\Endusers;
 
-use LevelFiveTeam\Railsbank\Command\Customer\EndUsers\CreatePerson;
+use Railsbank\Command\Customer\EndUsers\CreatePerson;
 use Test\CommandOrQueryTest;
 
 class PersonTest extends CommandOrQueryTest
