@@ -1,7 +1,7 @@
 <?php
 namespace Test\Helper;
 
-use LevelFiveTeam\Railsbank\Helper\DateFormat;
+use Railsbank\Helper\DateFormat;
 use PHPUnit\Framework\TestCase;
 
 class DateFormatTest extends TestCase

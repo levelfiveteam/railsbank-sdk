@@ -2,7 +2,7 @@
 
 namespace Test\Entity;
 
-use LevelFiveTeam\Railsbank\Entity\Version\VersionNumber;
+use Railsbank\Entity\Version\VersionNumber;
 use PHPUnit\Framework\TestCase;
 
 class VersionNumberTest extends TestCase

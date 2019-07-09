@@ -1,7 +1,7 @@
 <?php
 namespace Test\Helper;
 
-use LevelFiveTeam\Railsbank\Helper\ArrayResponse;
+use Railsbank\Helper\ArrayResponse;
 use PHPUnit\Framework\TestCase;
 
 class ArrayResponseTest extends TestCase

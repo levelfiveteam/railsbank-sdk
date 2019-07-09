@@ -1,9 +1,9 @@
 <?php
 namespace Test\Helper;
 
-use LevelFiveTeam\Railsbank\Exception\RailsbankConfigurationMissingException;
-use LevelFiveTeam\Railsbank\Exception\RailsbankConfigurationMissingValueException;
-use LevelFiveTeam\Railsbank\Helper\RailsbankConfigValidator;
+use Railsbank\Exception\RailsbankConfigurationMissingException;
+use Railsbank\Exception\RailsbankConfigurationMissingValueException;
+use Railsbank\Helper\RailsbankConfigValidator;
 use PHPUnit\Framework\TestCase;
 use Zend\Config\Config;
 
