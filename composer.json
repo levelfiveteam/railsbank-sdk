@@ -13,6 +13,7 @@
         "guzzlehttp/guzzle": "^6.3",
         "zendframework/zend-validator": "^2.12",
         "zendframework/zend-inputfilter": "^2.10",
+        "zendframework/zend-coding-standard": "~1.0.0",
         "zendframework/zend-config": "^3.2",
         "league/tactician": "^1.0",
         "league/tactician-container": "^2.0",
@@ -37,5 +38,16 @@
         "classmap": [
             "tests/"
         ]
+    },
+    "scripts": {
+        "check": [
+            "@cs-check",
+            "@test"
+        ],
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "test": "phpunit --colors=always",
+        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
+        "upload-coverage": "coveralls -v"
     }
 }

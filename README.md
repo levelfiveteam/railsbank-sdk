@@ -9,6 +9,7 @@ This is the Railsbank integration using PHP.
 [![Total Downloads](https://poser.pugx.org/levelfiveteam/railsbank-sdk/downloads.png)](https://packagist.org/packages/levelfiveteam/railsbank-sdk)
 [![Latest Stable Version](https://poser.pugx.org/levelfiveteam/railsbank-sdk/v/stable.png)](https://packagist.org/packages/levelfiveteam/railsbank-sdk)
 [![Latest Unstable Version](https://poser.pugx.org/levelfiveteam/railsbank-sdk/v/unstable.png)](https://packagist.org/packages/levelfiveteam/railsbank-sdk)
+[![Coverage Status](https://coveralls.io/repos/github/levelfiveteam/railsbank-sdk/badge.svg?branch=master)](https://coveralls.io/github/levelfiveteam/railsbank-sdk?branch=master)
 [![License](https://poser.pugx.org/levelfiveteam/railsbank-sdk/license.png)](https://packagist.org/packages/levelfiveteam/railsbank-sdk)
 
 ## Instructions
