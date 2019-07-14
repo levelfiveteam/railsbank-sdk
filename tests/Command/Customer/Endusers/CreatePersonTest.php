@@ -24,9 +24,6 @@ class PersonTest extends CommandOrQueryTest
                 'input' => [
                     'name' => 'Gaurav Malhotra',
                 ],
-                'expected_body' => [
-                    'name' => ' Malhotra',
-                ],
             ],
             'full information' => [
                 'error_expected' => false,
@@ -47,9 +44,6 @@ class PersonTest extends CommandOrQueryTest
                     'country_of_residence' => 'GB',
                     'enduser_meta' => 'test123',
                     'social_security_number' => 'JH8819291',
-                ],
-                'expected_body' => [
-                    'name' => ' Malhotra',
                 ],
             ],
         ];

@@ -8,12 +8,10 @@ use Railsbank\RailsbankClient;
 
 /**
  * Class GetTransactionHandler
- * @package Railsbank\Customer\GetQueryHandler
  */
 class GetTransactionHandler extends Handler
 {
     /**
-     * @param GetTransaction $command
      * @return \Railsbank\Entity\Transaction\Transaction
      * @throws \Exception
      */
@@ -22,9 +20,9 @@ class GetTransactionHandler extends Handler
         $client = new RailsbankClient($command->getRailsbankConfig());
 
         try {
-            /** @var \Railsbank\Entity\Transaction\Transaction $version */
-            $version = $client->handleApiCall($command, 'GET');
-            return $version;
+            /** @var \Railsbank\Entity\Transaction\Transaction $transaction */
+            $transaction = $client->handleApiCall($command, 'GET');
+            return $transaction;
         } catch (\Exception $e) {
             throw $e;
         }
