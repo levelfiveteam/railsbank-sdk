@@ -24,3 +24,5 @@ demos/
 extras/documentation
 
 .idea/
+
+/build

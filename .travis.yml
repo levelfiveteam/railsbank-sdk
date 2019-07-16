@@ -19,6 +19,8 @@ install:
 
 script:
   - composer test
+  - mkdir -p build/logs
+  - composer test-coverage
 
 after_success:
   - echo "Success!"
