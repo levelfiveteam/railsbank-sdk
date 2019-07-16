@@ -22,7 +22,8 @@ class GetPinTest extends CommandOrQueryTest
             'provide card id is valid' => [
                 false,
                 [ 'card_id' => '1234', ],
-            ]
+                [ 'card_id' => '1234', ],
+            ],
         ];
     }
 }
