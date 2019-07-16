@@ -24,6 +24,9 @@ class CloseLedgerTest extends CommandOrQueryTest
                 'input' => [
                     'ledger_id' => '1234',
                 ],
+                'expected_body' => [
+                    'ledger_id' => '1234',
+                ]
             ],
         ];
     }
