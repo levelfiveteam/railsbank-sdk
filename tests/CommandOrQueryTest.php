@@ -12,7 +12,7 @@ abstract class CommandOrQueryTest extends TestCase implements CommandOrQueryTest
     /**
      * @dataProvider getCommandInputs
      */
-    public function testCommand($errorExpected = false, $input = [])
+    public function testCommand($errorExpected = false, $input = [], $response = false)
     {
         if ($errorExpected) {
             self::expectException(DomainException::class);
@@ -27,5 +27,9 @@ abstract class CommandOrQueryTest extends TestCase implements CommandOrQueryTest
         $command = new $this->command($input);
 
         self::assertInstanceOf(Command::class, $command);
+
+        if ($response) {
+            self::assertInstanceOf($command->getBody(), $response);
+        }
     }
 }

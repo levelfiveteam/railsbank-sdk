@@ -24,6 +24,9 @@ class ActivateCardTest extends CommandOrQueryTest
                 'input' => [
                     'card_id' => 'test12343',
                 ],
+                'response_body' => [
+                    'card_id' => 'test12343',
+                ],
             ],
         ];
     }
