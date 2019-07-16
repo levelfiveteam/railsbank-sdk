@@ -31,10 +31,30 @@ class CreateLedgerTest extends CommandOrQueryTest
                     'holder_id' => '1234',
                     'partner_product' => 'test',
                 ],
+                'expected_response' => [
+                    'holder_id' => '1234',
+                    'partner_product' => 'test',
+                    'asset_class' => 'currency',
+                    'asset_type' => 'gbp',
+                    'ledger_type' => 'ledger-type-omnibus',
+                    'ledger_who_owns_assets' => 'ledger-assets-owned-by-me',
+                    'ledger_primary_use_types' => ['ledger-primary-use-types-payments'],
+                    'ledger_t_and_cs_country_of_jurisdiction' => 'GB'
+                ],
             ],
             'Full command working' => [
                 'error_expected' => false,
                 'input' => [
+                    'holder_id' => '1234',
+                    'partner_product' => 'test',
+                    'asset_class' => 'currency',
+                    'asset_type' => 'gbp',
+                    'ledger_type' => 'ledger-type-omnibus',
+                    'ledger_who_owns_assets' => 'ledger-assets-owned-by-me',
+                    'ledger_primary_use_types' => ['ledger-primary-use-types-payments'],
+                    'ledger_t_and_cs_country_of_jurisdiction' => 'GB'
+                ],
+                'expected_response' => [
                     'holder_id' => '1234',
                     'partner_product' => 'test',
                     'asset_class' => 'currency',

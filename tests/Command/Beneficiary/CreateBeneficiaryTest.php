@@ -27,6 +27,16 @@ class CreateBeneficiaryTest extends CommandOrQueryTest
                     'uk_sort_code' => '120010',
                     'person_name' => 'Mr Bob Smith',
                 ],
+                'expected_response' => [
+                    'holder_id' => '1234',
+                    'asset_class' => 'currency',
+                    'asset_type' => 'gbp',
+                    'uk_account_number' => '10020291',
+                    'uk_sort_code' => '120010',
+                    'person' => [
+                        'name' => 'Mr Bob Smith'
+                    ],
+                ],
             ],
         ];
     }

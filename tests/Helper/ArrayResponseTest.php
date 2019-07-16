@@ -22,6 +22,9 @@ class ArrayResponseTest extends TestCase
     {
         self::assertTrue($this->helper->offsetExists('hello'));
         self::assertFalse($this->helper->offsetExists('world'));
+        self::assertEquals('world', $this->helper->offsetGet('hello'));
+        self::assertNull($this->helper->offsetUnset('hello'));
+        self::assertNull($this->helper->offsetGet('hello'));
     }
 
 }
