@@ -18,11 +18,12 @@ install:
   - composer install
 
 script:
-  - composer test
   - mkdir -p build/logs
+  - composer test
   - composer test-coverage
 
 after_success:
+  - travis_retry php vendor/bin/php-coveralls -v
   - echo "Success!"
 
 notifications:
