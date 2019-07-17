@@ -22,10 +22,10 @@ class VersionNumber extends Entity implements EntityInterface
      */
     public function __construct($response)
     {
+        parent::__construct($response);
+
         $response = new ArrayResponse($response);
         $this->version = $response->offsetGet('version');
-
-        parent::__construct($response);
     }
 
     public function getVersion(): string
