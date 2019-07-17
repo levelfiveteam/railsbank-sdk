@@ -6,7 +6,6 @@ use Railsbank\Entity\EntityInterface;
 
 /**
  * Class Transactions
- * @package Railsbank\Entity\Transaction
  */
 class Transactions extends Entity implements EntityInterface
 {

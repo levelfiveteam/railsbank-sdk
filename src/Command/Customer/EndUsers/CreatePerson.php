@@ -13,13 +13,13 @@ class CreatePerson extends Command implements CommandInterface
         return [
             'person' => [
                 'address' => [
-                    'address_city' => $this->input->get('address_city')->getValue(),
                     'address_iso_country' => $this->input->get('address_iso_country')->getValue(),
                     'address_number' => $this->input->get('address_number')->getValue(),
                     'address_postal_code' => $this->input->get('address_postal_code')->getValue(),
                     'address_refinement' => $this->input->get('address_refinement')->getValue(),
                     'address_region' => $this->input->get('address_region')->getValue(),
                     'address_street' => $this->input->get('address_street')->getValue(),
+                    'address_city' => $this->input->get('address_city')->getValue(),
                 ],
                 'country_of_residence' => [ $this->input->get('country_of_residence')->getValue() ],
                 'date_onboarded' => (new DateFormat())->getCurrentDate(),

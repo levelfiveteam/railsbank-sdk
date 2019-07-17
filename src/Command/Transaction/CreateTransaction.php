@@ -20,6 +20,7 @@ class CreateTransaction extends Command implements CommandInterface, QueryInterf
     public function getBody(): ?array
     {
         return [
+            'reference' => $this->input->get('reference')->getValue(),
             'payment_type' => 'payment-type-UK-FasterPayments',
             'amount' => $this->input->get('amount')->getValue(),
             'ledger_from_id' => $this->input->get('ledger_from_id')->getValue(),
