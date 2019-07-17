@@ -42,6 +42,8 @@ class Information extends Entity implements EntityInterface
      */
     public function __construct($response)
     {
+        parent::__construct($response);
+
         $response = new ArrayResponse($response);
         $this->id = $response->offsetGet('customer_id');
         $this->metaCustomerId = $response->offsetGet('metacustomer_id');
@@ -50,8 +52,6 @@ class Information extends Entity implements EntityInterface
 
         $company = new ArrayResponse($response->offsetGet('company'));
         $this->companyName = $company->offsetGet('name');
-
-        parent::__construct($response);
     }
 
     /**

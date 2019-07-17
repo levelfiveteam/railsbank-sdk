@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Entity;
+namespace Test\Entity\Version;
 
 use Railsbank\Entity\Version\VersionNumber;
 use PHPUnit\Framework\TestCase;
