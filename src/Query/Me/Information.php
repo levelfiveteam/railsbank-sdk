@@ -14,6 +14,6 @@ class Information extends Command implements CommandInterface, QueryInterface
 
     public function getBody() :? array
     {
-        //
+        return [];
     }
 }
