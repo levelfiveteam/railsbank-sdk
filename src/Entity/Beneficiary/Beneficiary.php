@@ -56,10 +56,6 @@ class Beneficiary extends Entity implements EntityInterface
      */
     private $personName;
 
-    /**
-     * Person constructor.
-     * @param mixed $response
-     */
     public function __construct($response)
     {
         $response = new ArrayResponse($response);
@@ -79,65 +75,40 @@ class Beneficiary extends Entity implements EntityInterface
         parent::__construct($response);
     }
 
-    /**
-     * @return string
-     */
     public function getIban(): string
     {
         return $this->iban;
     }
 
-    /**
-     * @return string
-     */
     public function getBicSwift(): string
     {
         return $this->bicSwift;
     }
 
-    /**
-     * @return string
-     */
     public function getLastModifiedAt(): string
     {
         return $this->lastModifiedAt;
     }
 
-    /**
-     * @return string
-     */
     public function getBeneficiaryStatus(): string
     {
         return $this->beneficiaryStatus;
     }
 
-    /**
-     * @return string
-     */
     public function getSortCode(): string
     {
         return $this->sortCode;
     }
 
-    /**
-     * @return string
-     */
     public function getAccountNumber(): string
     {
         return $this->accountNumber;
     }
 
-    /**
-     * @return string
-     */
     public function getBankName():? string
     {
         return $this->bankName;
     }
-
-    /**
-     * @return string
-     */
     public function getPersonName():? string
     {
         return $this->personName;
