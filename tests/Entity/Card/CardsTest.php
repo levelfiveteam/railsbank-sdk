@@ -79,4 +79,53 @@ class CardsTest extends TestCase
         // Now we should not be able to see card by card ID GB1
         self::assertNull($entity->getCardById('GB1'));
     }
+
+
+    public function testGetByLedgerId()
+    {
+        $response = [
+            [
+                'ledger_id' => '1234',
+                'card_token' => 'GB1234111000',
+                'card_id' => 'GB1',
+                'created_at' => '2019-01-02',
+                'card_type' => 'mastercard',
+                'partner_product' => 'product-a',
+                'card_design' => 'thebest',
+                'card_status' => 'active',
+                'card_programme' => 'UK',
+            ],
+            [
+                'ledger_id' => '1231',
+                'card_token' => 'GB1234111000',
+                'card_id' => 'GB2',
+                'created_at' => '2019-01-02',
+                'card_type' => 'mastercard',
+                'partner_product' => 'product-a',
+                'card_design' => 'thebest',
+                'card_status' => 'active',
+                'card_programme' => 'UK',
+            ],
+            [
+                'ledger_id' => '1231',
+                'card_token' => 'GB1234111000',
+                'card_id' => 'GB3',
+                'created_at' => '2019-01-02',
+                'card_type' => 'mastercard',
+                'partner_product' => 'product-a',
+                'card_design' => 'thebest',
+                'card_status' => 'active',
+                'card_programme' => 'UK',
+            ],
+        ];
+
+        $entity = new Cards($response);
+
+        self::assertEquals(3, count($entity->getCards()));
+
+        // Only get the ones with ledger ID 1231
+        $cards = $entity->getByLedgerId('1231');
+
+        self::assertEquals(2, count($entity->getCards()));
+    }
 }
