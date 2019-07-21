@@ -60,4 +60,18 @@ class Cards extends Entity implements EntityInterface
 
         return $this;
     }
+
+    public function getCardById(string $cardId) :? Card
+    {
+        $cards = $this->getCards();
+
+        /** @var Card $card */
+        foreach ($cards as $card) {
+            if ($card->getCardId() === $cardId) {
+                return $card;
+            }
+        }
+
+        return null;
+    }
 }
