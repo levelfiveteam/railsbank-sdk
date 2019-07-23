@@ -18,6 +18,9 @@ class BeneficiaryTest extends TestCase
             'uk_sort_code' => '10-00-11',
             'uk_account_number' => '10021100',
             'bank_name' => 'Starling',
+            'person' => [
+                'name' => 'John Smith',
+            ],
         ];
 
         $entity = new Beneficiary($response);
@@ -30,5 +33,6 @@ class BeneficiaryTest extends TestCase
         self::assertEquals('10-00-11', $entity->getSortCode());
         self::assertEquals('10021100', $entity->getAccountNumber());
         self::assertEquals('Starling', $entity->getBankName());
+        self::assertEquals('John Smith', $entity->getPersonName());
     }
 }

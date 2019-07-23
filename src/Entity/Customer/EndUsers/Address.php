@@ -53,13 +53,13 @@ class Address extends Entity implements EntityInterface
     public function __construct($response)
     {
         $response = new ArrayResponse($response);
-        $this->endUserId = $response->offsetGet('addressCity');
-        $this->endUserId = $response->offsetGet('addressIsoCountry');
-        $this->endUserId = $response->offsetGet('addressNumber');
-        $this->endUserId = $response->offsetGet('addressPostalCode');
-        $this->endUserId = $response->offsetGet('addressRefinement');
-        $this->endUserId = $response->offsetGet('addressRegion');
-        $this->endUserId = $response->offsetGet('addressStreet');
+        $this->addressCity = $response->offsetGet('addressCity');
+        $this->addressIsoCountry = $response->offsetGet('addressIsoCountry');
+        $this->addressNumber = $response->offsetGet('addressNumber');
+        $this->addressPostalCode = $response->offsetGet('addressPostalCode');
+        $this->addressRefinement = $response->offsetGet('addressRefinement');
+        $this->addressRegion = $response->offsetGet('addressRegion');
+        $this->addressStreet = $response->offsetGet('addressStreet');
 
         parent::__construct($response);
     }
