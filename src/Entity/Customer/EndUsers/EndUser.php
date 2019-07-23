@@ -59,6 +59,7 @@ class EndUser extends Entity implements EntityInterface
     {
         $response = new ArrayResponse($response);
         $this->enduserId = $response->offsetGet('enduser_id');
+
         $this->person = new Person($response->offsetGet('person'));
         $this->ledgers = $response->offsetGet('ledgers');
 
