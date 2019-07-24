@@ -1,6 +1,7 @@
 <?php
 namespace Railsbank\Entity\Customer\EndUsers;
 
+use phpDocumentor\Reflection\Types\Mixed_;
 use Railsbank\Entity\Entity;
 use Railsbank\Entity\EntityInterface;
 use Railsbank\Helper\ArrayResponse;
@@ -37,6 +38,11 @@ class EndUser extends Entity implements EntityInterface
     private $lastModifiedAt;
 
     /**
+     * @var mixed|null
+     */
+    private $metaData;
+
+    /**
      * @var array|null
      */
     private $ledgers;
@@ -59,6 +65,11 @@ class EndUser extends Entity implements EntityInterface
     {
         $response = new ArrayResponse($response);
         $this->enduserId = $response->offsetGet('enduser_id');
+        $this->createdAt = $response->offsetGet('created_at');
+        $this->metaData = $response->offsetGet('enduser_meta');
+        $this->enduserStatus = $response->offsetGet('enduser_status');
+        $this->entityType = $response->offsetGet('entity_type');
+        $this->lastModifiedAt = $response->offsetGet('last_modified_at');
 
         $this->person = new Person($response->offsetGet('person'));
         $this->ledgers = $response->offsetGet('ledgers');
@@ -103,27 +114,26 @@ class EndUser extends Entity implements EntityInterface
         return $this->lastModifiedAt;
     }
 
-    /**
-     * @return array
-     */
     public function getLedgers():? array
     {
         return $this->ledgers;
     }
 
-    /**
-     * @return Person
-     */
     public function getPerson():? Person
     {
         return $this->person;
     }
 
-    /**
-     * @return bool
-     */
     public function isScreenMonitoredSearch():? bool
     {
         return $this->screenMonitoredSearch;
+    }
+
+    /**
+     * @return mixed|null
+     */
+    public function getMetaData()
+    {
+        return $this->metaData;
     }
 }
