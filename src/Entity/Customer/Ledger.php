@@ -7,7 +7,6 @@ use Railsbank\Entity\EntityInterface;
 
 /**
  * Class Ledger
- * @package Railsbank\Entity\Customer\Ledger
  */
 class Ledger extends Entity implements EntityInterface
 {
@@ -16,10 +15,6 @@ class Ledger extends Entity implements EntityInterface
      */
     private $ledgerId;
 
-    /**
-     * Person constructor.
-     * @param mixed $response
-     */
     public function __construct($response)
     {
         $response = new ArrayResponse($response);
