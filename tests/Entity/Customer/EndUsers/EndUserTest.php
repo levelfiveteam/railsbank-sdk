@@ -18,6 +18,7 @@ class EndUserTest extends TestCase
             'enduser_status' => 'enduser-status-ok',
             'entity_type' => 'person',
             'last_modified_at' => '2019-05-01',
+            'screening_monitored_search' => true,
             'person' => [
                 'date_of_birth' => '1980-07-11',
                 'date_onboarded' => '2019-01-01',
@@ -63,8 +64,33 @@ class EndUserTest extends TestCase
         self::assertEquals('person', $entity->getEntityType());
         self::assertEquals('2019-05-01', $entity->getLastModifiedAt());
 
+        self::assertEquals(
+            [
+                [
+                    'ledger_id' => 'bb8b2428-f94c-41df-8e82-a895ab4d6ac8',
+                ],
+                [
+                    'ledger_id' => 'bb8b2428-f94c-41df-8e82-a895ab4112221',
+                ],
+                [
+                    'ledger_id' => 'bb8b2428-f94c-41df-8e82-adsad14d6ac8',
+                ]
+            ],
+            $entity->getLedgers()
+        );
+
+
+        self::assertEquals(
+            [
+                [
+                    'beneficiary_id' => 'bb8b2428-f94c-41df-8e82-a895ab4d6333',
+                ]
+            ],
+            $entity->getBeneficiaries()
+        );
+
         $person = $entity->getPerson();
-        
+
         self::assertInstanceOf(Person::class, $person);
 
         self::assertEquals('1980-07-11', $person->getDateOfBirth());
@@ -75,9 +101,9 @@ class EndUserTest extends TestCase
         self::assertEquals('03331011011', $person->getTelephone());
 
         $address = $person->getAddress();
-        
+
         self::assertInstanceOf(Address::class, $address);
-        
+
         self::assertEquals('London', $address->getAddressCity());
         self::assertEquals('32', $address->getAddressIsoCountry());
         self::assertEquals('55', $address->getAddressNumber());

@@ -48,6 +48,11 @@ class EndUser extends Entity implements EntityInterface
     private $ledgers;
 
     /**
+     * @var array|null
+     */
+    private $beneficiaries;
+
+    /**
      * @var Person
      */
     private $person;
@@ -70,9 +75,11 @@ class EndUser extends Entity implements EntityInterface
         $this->enduserStatus = $response->offsetGet('enduser_status');
         $this->entityType = $response->offsetGet('entity_type');
         $this->lastModifiedAt = $response->offsetGet('last_modified_at');
+        $this->screenMonitoredSearch = $response->offsetGet('screening_monitored_search');
 
         $this->person = new Person($response->offsetGet('person'));
         $this->ledgers = $response->offsetGet('ledgers');
+        $this->beneficiaries = $response->offsetGet('beneficiaries');
 
         parent::__construct($response);
     }
@@ -127,6 +134,11 @@ class EndUser extends Entity implements EntityInterface
     public function isScreenMonitoredSearch():? bool
     {
         return $this->screenMonitoredSearch;
+    }
+
+    public function getBeneficiaries():? array
+    {
+        return $this->beneficiaries;
     }
 
     /**
