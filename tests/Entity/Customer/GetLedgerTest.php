@@ -36,6 +36,7 @@ class GetLedgerTest extends TestCase
         self::assertEquals('1234', $entity->getHolderId());
         self::assertEquals('103032.22', $entity->getCurrentBalance());
         self::assertEquals('ledger-status-ok', $entity->getStatus());
+        self::assertEquals('2019-03-22', $entity->getLastModifiedAt());
         self::assertTrue($entity->isLedgerStatusOk());
     }
 }

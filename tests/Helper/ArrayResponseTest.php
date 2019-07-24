@@ -31,4 +31,16 @@ class ArrayResponseTest extends TestCase
         self::assertEquals('hello', $this->helper->offsetGet('world'));
     }
 
+    public function testArrayNoOffset()
+    {
+        $this->helper->offsetSet(null, '123');
+
+        self::assertEquals(
+            [
+                '123',
+                'hello' => 'world'
+            ],
+            $this->helper->getArray()
+        );
+    }
 }
