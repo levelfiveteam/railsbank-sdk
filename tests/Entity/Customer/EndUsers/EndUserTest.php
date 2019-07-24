@@ -89,6 +89,8 @@ class EndUserTest extends TestCase
             $entity->getBeneficiaries()
         );
 
+        self::assertEquals(true, $entity->isScreenMonitoredSearch());
+
         $person = $entity->getPerson();
 
         self::assertInstanceOf(Person::class, $person);
