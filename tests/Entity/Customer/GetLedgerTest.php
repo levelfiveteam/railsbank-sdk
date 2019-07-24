@@ -20,6 +20,7 @@ class GetLedgerTest extends TestCase
             'created_at' => '2019-01-01',
             'holder_id' => '1234',
             'last_modified_at' => '2019-03-22',
+            'ledger_status' => 'ledger-status-ok',
         ];
 
         $entity = new GetLedger($response);
@@ -33,5 +34,8 @@ class GetLedgerTest extends TestCase
         self::assertEquals('currency', $entity->getAssetType());
         self::assertEquals('2019-01-01', $entity->getCreatedAt());
         self::assertEquals('1234', $entity->getHolderId());
+        self::assertEquals('103032.22', $entity->getCurrentBalance());
+        self::assertEquals('ledger-status-ok', $entity->getStatus());
+        self::assertTrue($entity->isLedgerStatusOk());
     }
 }
