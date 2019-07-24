@@ -6,7 +6,7 @@ class ArrayResponse
     /**
      * @var array
      */
-    private $apiResponse;
+    private $apiResponse = [];
 
     /**
      * ArrayResponse constructor.
@@ -39,5 +39,10 @@ class ArrayResponse
     public function offsetGet($offset)
     {
         return $this->apiResponse[$offset] ?? null;
+    }
+
+    public function getArray() : array
+    {
+        return $this->apiResponse;
     }
 }

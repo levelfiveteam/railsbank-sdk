@@ -94,49 +94,31 @@ class GetLedger extends Entity implements EntityInterface
         parent::__construct($response);
     }
 
-    /**
-     * @return string
-     */
     public function getIban():? string
     {
         return $this->iban;
     }
 
-    /**
-     * @return string
-     */
     public function getSortCode():? string
     {
         return $this->sortCode;
     }
 
-    /**
-     * @return string
-     */
     public function getAccountNumber():? string
     {
         return $this->accountNumber;
     }
 
-    /**
-     * @return string
-     */
     public function getBicSwift():? string
     {
         return $this->bicSwift;
     }
 
-    /**
-     * @return string
-     */
     public function getCurrentBalance():? string
     {
         return $this->currentBalance;
     }
 
-    /**
-     * @return string
-     */
     public function getStatus():? string
     {
         return $this->status;
@@ -147,49 +129,31 @@ class GetLedger extends Entity implements EntityInterface
         return ($this->status === 'ledger-status-ok');
     }
 
-    /**
-     * @return float
-     */
     public function getAmount(): float
     {
         return $this->amount;
     }
 
-    /**
-     * @return string
-     */
     public function getAssetClass(): string
     {
         return $this->assetClass;
     }
 
-    /**
-     * @return string
-     */
     public function getAssetType(): string
     {
         return $this->assetType;
     }
 
-    /**
-     * @return string
-     */
     public function getCreatedAt(): string
     {
         return $this->createdAt;
     }
 
-    /**
-     * @return string
-     */
     public function getHolderId(): string
     {
         return $this->holderId;
     }
 
-    /**
-     * @return string
-     */
     public function getLastModifiedAt(): string
     {
         return $this->lastModifiedAt;
