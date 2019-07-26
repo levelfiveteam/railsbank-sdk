@@ -265,321 +265,201 @@ class DetailedTransaction extends Entity implements EntityInterface
         parent::__construct($response);
     }
 
-    /**
-     * @return string|null
-     */
     public function getSettlementDate(): ?string
     {
         return $this->settlementDate;
     }
 
-    /**
-     * @return string|null
-     */
     public function getPaymentType(): ?string
     {
         return $this->paymentType;
     }
 
-    /**
-     * @return string|null
-     */
     public function getTransactionType(): ?string
     {
         return $this->transactionType;
     }
 
-    /**
-     * @return string|null
-     */
     public function getCardCurrency(): ?string
     {
         return $this->cardCurrency;
     }
 
-    /**
-     * @return string|null
-     */
     public function getReceiptId(): ?string
     {
         return $this->receiptId;
     }
 
-    /**
-     * @return string|null
-     */
     public function getPartnerProductFx(): ?string
     {
         return $this->partnerProductFx;
     }
 
-    /**
-     * @return string|null
-     */
     public function getPaymentMethod(): ?string
     {
         return $this->paymentMethod;
     }
 
-    /**
-     * @return string|null
-     */
     public function getTransactionStatus(): ?string
     {
         return $this->transactionStatus;
     }
 
-    /**
-     * @return string|null
-     */
     public function getTransactionAuditNumber(): ?string
     {
         return $this->transactionAuditNumber;
     }
 
-    /**
-     * @return string|null
-     */
     public function getConversionRate(): ?string
     {
         return $this->conversionRate;
     }
 
-    /**
-     * @return string|null
-     */
     public function getPointOfSaleReference(): ?string
     {
         return $this->pointOfSaleReference;
     }
 
-    /**
-     * @return string|null
-     */
     public function getMccDescription(): ?string
     {
         return $this->mccDescription;
     }
 
-    /**
-     * @return string|null
-     */
     public function getLedgerToId(): ?string
     {
         return $this->ledgerToId;
     }
 
-    /**
-     * @return string|null
-     */
     public function getCardExpiryDate(): ?string
     {
         return $this->cardExpiryDate;
     }
 
-    /**
-     * @return string|null
-     */
     public function getFixedSide(): ?string
     {
         return $this->fixedSide;
     }
 
-    /**
-     * @return string|null
-     */
     public function getMerchantCategoryCode(): ?string
     {
         return $this->merchantCategoryCode;
     }
 
-    /**
-     * @return string|null
-     */
     public function getPointOfSaleCountryCode(): ?string
     {
         return $this->pointOfSaleCountryCode;
     }
 
-    /**
-     * @return string|null
-     */
     public function getTransactionFee(): ?string
     {
         return $this->transactionFee;
     }
 
-    /**
-     * @return string|null
-     */
     public function getCardUsed(): ?string
     {
         return $this->cardUsed;
     }
 
-    /**
-     * @return string|null
-     */
     public function getAdditionalInfo(): ?string
     {
         return $this->additionalInfo;
     }
 
-    /**
-     * @return string|null
-     */
     public function getMerchantbankId(): ?string
     {
         return $this->merchantbankId;
     }
 
-    /**
-     * @return string|null
-     */
     public function getReference(): ?string
     {
         return $this->reference;
     }
 
-    /**
-     * @return string|null
-     */
     public function getMerchantDetails(): ?string
     {
         return $this->merchantDetails;
     }
 
-    /**
-     * @return string|null
-     */
     public function getAmount(): ?string
     {
         return $this->amount;
     }
 
-    /**
-     * @return string|null
-     */
     public function getTransactionId(): ?string
     {
         return $this->transactionId;
     }
 
-    /**
-     * @return string|null
-     */
     public function getCreatedAt(): ?string
     {
         return $this->createdAt;
     }
 
-    /**
-     * @return string|null
-     */
     public function getPartnerProduct(): ?string
     {
         return $this->partnerProduct;
     }
 
-    /**
-     * @return string|null
-     */
     public function getConversionDate(): ?string
     {
         return $this->conversionDate;
     }
 
-    /**
-     * @return string|null
-     */
     public function getBeneficiaryId(): ?string
     {
         return $this->beneficiaryId;
     }
 
-    /**
-     * @return string|null
-     */
     public function getAssetType(): ?string
     {
         return $this->assetType;
     }
 
-    /**
-     * @return string|null
-     */
     public function getAssetClass(): ?string
     {
         return $this->assetClass;
     }
 
-    /**
-     * @return string|null
-     */
     public function getTransactionCurrency(): ?string
     {
         return $this->transactionCurrency;
     }
 
-    /**
-     * @return string|null
-     */
     public function getMerchantId(): ?string
     {
         return $this->merchantId;
     }
 
-    /**
-     * @return string|null
-     */
     public function getPointOfSaleInfo(): ?string
     {
         return $this->pointOfSaleInfo;
     }
 
-    /**
-     * @return string|null
-     */
     public function getAmountLocalCurrency(): ?string
     {
         return $this->amountLocalCurrency;
     }
 
-    /**
-     * @return string|null
-     */
     public function getCardTransactionType(): ?string
     {
         return $this->cardTransactionType;
     }
 
-    /**
-     * @return string|null
-     */
     public function getBeneficiaryAccountId(): ?string
     {
         return $this->beneficiaryAccountId;
     }
 
-    /**
-     * @return string|null
-     */
     public function getSourceSortCode(): ?string
     {
         return $this->sourceSortCode;
     }
 
-    /**
-     * @return string|null
-     */
     public function getSourceAccountNumber(): ?string
     {
         return $this->sourceAccountNumber;
     }
 
-    /**
-     * @return string|null
-     */
     public function getSourceAccountName(): ?string
     {
         return $this->sourceAccountName;
