@@ -220,7 +220,7 @@ class DetailedTransaction extends Entity implements EntityInterface
         $response = new ArrayResponse($response);
         $this->settlementDate = $response->offsetGet('settlement_date');
         $this->paymentType = $response->offsetGet('payment_type');
-        $this->transactionType = $response->offsetGet('transacton_type');
+        $this->transactionType = $response->offsetGet('transaction_type');
         $this->cardCurrency = $response->offsetGet('card_currency');
         $this->receiptId = $response->offsetGet('receipt_id');
         $this->partnerProductFx = $response->offsetGet('partner_product_fx');
@@ -238,7 +238,7 @@ class DetailedTransaction extends Entity implements EntityInterface
         $this->transactionFee = $response->offsetGet('transaction_fee');
         $this->cardUsed = $response->offsetGet('card_used');
         $this->additionalInfo = $response->offsetGet('additional_info');
-        $this->merchantbankId = $response->offsetGet('merchant_bank_id');
+        $this->merchantbankId = $response->offsetGet('merchantbank_id');
         $this->reference = $response->offsetGet('reference');
         $this->merchantDetails = $response->offsetGet('merchant_details');
         $this->amount = $response->offsetGet('amount');

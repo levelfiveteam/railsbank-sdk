@@ -240,10 +240,24 @@ London',
 
         self::assertEquals('2018-05-27', $entity->getSettlementDate());
         self::assertEquals('payment-type-EU-SEPA-Step2', $entity->getPaymentType());
-        self::assertEquals('transaction-type-send', $entity->getCardCurrency());
+        self::assertEquals('transaction-type-send', $entity->getTransactionType());
+        self::assertEquals('USD', $entity->getCardCurrency());
         self::assertEquals('a12345678901234', $entity->getReceiptId());
         self::assertEquals('PayrNet-FX-1', $entity->getPartnerProductFx());
         self::assertEquals('swift', $entity->getPaymentMethod());
         self::assertEquals('transaction-status-accepted', $entity->getTransactionStatus());
+        self::assertEquals('122436', $entity->getTransactionAuditNumber());
+        self::assertEquals('1.69', $entity->getConversionRate());
+        self::assertEquals('000000001631', $entity->getPointOfSaleReference());
+        self::assertEquals('Veterinary Services', $entity->getMccDescription());
+        self::assertEquals('8763b5df-a61c-4f77-9724-41ca9cde3654', $entity->getLedgerToId());
+        self::assertEquals('07-19', $entity->getCardExpiryDate());
+        self::assertEquals('7523', $entity->getMerchantCategoryCode());
+        self::assertEquals('GB', $entity->getPointOfSaleCountryCode());
+        self::assertEquals('0', $entity->getTransactionFee());
+        self::assertEquals('454704641',$entity->getCardUsed());
+        self::assertEquals('T6105000019203927', $entity->getAdditionalInfo());
+        self::assertEquals('012216', $entity->getMerchantbankId());
+        self::assertEquals('2000-01-01T00:00:00.000Z', $entity->getCreatedAt());
     }
 }
