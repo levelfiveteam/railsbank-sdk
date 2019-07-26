@@ -5,7 +5,7 @@ namespace Test\Entity\Transaction;
 use PHPUnit\Framework\TestCase;
 use Railsbank\Entity\Transaction\DetailedTransaction;
 
-class AddressTest extends TestCase
+class DetailedTransactionTest extends TestCase
 {
     public function testDetailedTransaction()
     {
