@@ -68,41 +68,26 @@ class Transaction extends Entity implements EntityInterface
         return $this;
     }
 
-    /**
-     * @return string|null
-     */
     public function getCreatedAt(): ?string
     {
         return $this->createdAt;
     }
 
-    /**
-     * @return string|null
-     */
     public function getLedgerEntryId(): ?string
     {
         return $this->ledgerEntryId;
     }
 
-    /**
-     * @return string|null
-     */
     public function getTransactionId(): ?string
     {
         return $this->transactionId;
     }
 
-    /**
-     * @return string|null
-     */
     public function getAmount(): ?string
     {
         return $this->amount;
     }
 
-    /**
-     * @return string|null
-     */
     public function getLedgerEntryType(): ?string
     {
         return $this->ledgerEntryType;

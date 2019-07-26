@@ -220,7 +220,7 @@ class DetailedTransaction extends Entity implements EntityInterface
         $response = new ArrayResponse($response);
         $this->settlementDate = $response->offsetGet('settlement_date');
         $this->paymentType = $response->offsetGet('payment_type');
-        $this->transactionType = $response->offsetGet('transacton_type');
+        $this->transactionType = $response->offsetGet('transaction_type');
         $this->cardCurrency = $response->offsetGet('card_currency');
         $this->receiptId = $response->offsetGet('receipt_id');
         $this->partnerProductFx = $response->offsetGet('partner_product_fx');
@@ -238,15 +238,14 @@ class DetailedTransaction extends Entity implements EntityInterface
         $this->transactionFee = $response->offsetGet('transaction_fee');
         $this->cardUsed = $response->offsetGet('card_used');
         $this->additionalInfo = $response->offsetGet('additional_info');
-        $this->merchantbankId = $response->offsetGet('merchant_bank_id');
+        $this->merchantbankId = $response->offsetGet('merchantbank_id');
         $this->reference = $response->offsetGet('reference');
         $this->merchantDetails = $response->offsetGet('merchant_details');
-        $this->amount = $response->offsetGet('amount');
-        $this->transactionId = $response->offsetGet('transaction_id');
         $this->createdAt = $response->offsetGet('created_at');
         $this->partnerProduct = $response->offsetGet('partner_product');
         $this->conversionDate = $response->offsetGet('conversion_date');
         $this->beneficiaryId = $response->offsetGet('beneficiary_id');
+        $this->assetClass = $response->offsetGet('asset_class');
         $this->assetType = $response->offsetGet('asset_type');
         $this->transactionCurrency = $response->offsetGet('transaction_currency');
         $this->merchantId = $response->offsetGet('merchant_id');
@@ -255,333 +254,195 @@ class DetailedTransaction extends Entity implements EntityInterface
         $this->cardTransactionType = $response->offsetGet('card_transaction_type');
         $this->beneficiaryAccountId = $response->offsetGet('beneficiary_account_id');
 
-        $paymentInfo = new ArrayResponse($response->offsetGet('payment_info'));
-        $sourceAccount = new ArrayResponse($paymentInfo->offsetGet('sourceAccount'));
-
-        $this->sourceAccountName = $sourceAccount->offsetGet('accountName');
-        $this->sourceAccountNumber = $sourceAccount->offsetGet('accountNumber');
-        $this->sourceSortCode = $sourceAccount->offsetGet('sortCode');
+        $transactionInfo = new ArrayResponse($response->offsetGet('transaction_info'));
+        $this->transactionId = $transactionInfo->offsetGet('transaction_id');
+        $this->amount = $transactionInfo->offsetGet('amount');
 
         parent::__construct($response);
     }
 
-    /**
-     * @return string|null
-     */
     public function getSettlementDate(): ?string
     {
         return $this->settlementDate;
     }
 
-    /**
-     * @return string|null
-     */
     public function getPaymentType(): ?string
     {
         return $this->paymentType;
     }
 
-    /**
-     * @return string|null
-     */
     public function getTransactionType(): ?string
     {
         return $this->transactionType;
     }
 
-    /**
-     * @return string|null
-     */
     public function getCardCurrency(): ?string
     {
         return $this->cardCurrency;
     }
 
-    /**
-     * @return string|null
-     */
     public function getReceiptId(): ?string
     {
         return $this->receiptId;
     }
 
-    /**
-     * @return string|null
-     */
     public function getPartnerProductFx(): ?string
     {
         return $this->partnerProductFx;
     }
 
-    /**
-     * @return string|null
-     */
     public function getPaymentMethod(): ?string
     {
         return $this->paymentMethod;
     }
 
-    /**
-     * @return string|null
-     */
     public function getTransactionStatus(): ?string
     {
         return $this->transactionStatus;
     }
 
-    /**
-     * @return string|null
-     */
     public function getTransactionAuditNumber(): ?string
     {
         return $this->transactionAuditNumber;
     }
 
-    /**
-     * @return string|null
-     */
     public function getConversionRate(): ?string
     {
         return $this->conversionRate;
     }
 
-    /**
-     * @return string|null
-     */
     public function getPointOfSaleReference(): ?string
     {
         return $this->pointOfSaleReference;
     }
 
-    /**
-     * @return string|null
-     */
     public function getMccDescription(): ?string
     {
         return $this->mccDescription;
     }
 
-    /**
-     * @return string|null
-     */
     public function getLedgerToId(): ?string
     {
         return $this->ledgerToId;
     }
 
-    /**
-     * @return string|null
-     */
     public function getCardExpiryDate(): ?string
     {
         return $this->cardExpiryDate;
     }
 
-    /**
-     * @return string|null
-     */
     public function getFixedSide(): ?string
     {
         return $this->fixedSide;
     }
 
-    /**
-     * @return string|null
-     */
     public function getMerchantCategoryCode(): ?string
     {
         return $this->merchantCategoryCode;
     }
 
-    /**
-     * @return string|null
-     */
     public function getPointOfSaleCountryCode(): ?string
     {
         return $this->pointOfSaleCountryCode;
     }
 
-    /**
-     * @return string|null
-     */
     public function getTransactionFee(): ?string
     {
         return $this->transactionFee;
     }
 
-    /**
-     * @return string|null
-     */
     public function getCardUsed(): ?string
     {
         return $this->cardUsed;
     }
 
-    /**
-     * @return string|null
-     */
     public function getAdditionalInfo(): ?string
     {
         return $this->additionalInfo;
     }
 
-    /**
-     * @return string|null
-     */
     public function getMerchantbankId(): ?string
     {
         return $this->merchantbankId;
     }
 
-    /**
-     * @return string|null
-     */
     public function getReference(): ?string
     {
         return $this->reference;
     }
 
-    /**
-     * @return string|null
-     */
     public function getMerchantDetails(): ?string
     {
         return $this->merchantDetails;
     }
 
-    /**
-     * @return string|null
-     */
     public function getAmount(): ?string
     {
         return $this->amount;
     }
 
-    /**
-     * @return string|null
-     */
     public function getTransactionId(): ?string
     {
         return $this->transactionId;
     }
 
-    /**
-     * @return string|null
-     */
     public function getCreatedAt(): ?string
     {
         return $this->createdAt;
     }
 
-    /**
-     * @return string|null
-     */
     public function getPartnerProduct(): ?string
     {
         return $this->partnerProduct;
     }
 
-    /**
-     * @return string|null
-     */
     public function getConversionDate(): ?string
     {
         return $this->conversionDate;
     }
 
-    /**
-     * @return string|null
-     */
     public function getBeneficiaryId(): ?string
     {
         return $this->beneficiaryId;
     }
 
-    /**
-     * @return string|null
-     */
     public function getAssetType(): ?string
     {
         return $this->assetType;
     }
 
-    /**
-     * @return string|null
-     */
     public function getAssetClass(): ?string
     {
         return $this->assetClass;
     }
 
-    /**
-     * @return string|null
-     */
     public function getTransactionCurrency(): ?string
     {
         return $this->transactionCurrency;
     }
 
-    /**
-     * @return string|null
-     */
     public function getMerchantId(): ?string
     {
         return $this->merchantId;
     }
 
-    /**
-     * @return string|null
-     */
     public function getPointOfSaleInfo(): ?string
     {
         return $this->pointOfSaleInfo;
     }
 
-    /**
-     * @return string|null
-     */
     public function getAmountLocalCurrency(): ?string
     {
         return $this->amountLocalCurrency;
     }
 
-    /**
-     * @return string|null
-     */
     public function getCardTransactionType(): ?string
     {
         return $this->cardTransactionType;
     }
 
-    /**
-     * @return string|null
-     */
     public function getBeneficiaryAccountId(): ?string
     {
         return $this->beneficiaryAccountId;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getSourceSortCode(): ?string
-    {
-        return $this->sourceSortCode;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getSourceAccountNumber(): ?string
-    {
-        return $this->sourceAccountNumber;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getSourceAccountName(): ?string
-    {
-        return $this->sourceAccountName;
     }
 }
