@@ -270,5 +270,9 @@ London',
         self::assertEquals('GBP', $entity->getTransactionCurrency());
         self::assertEquals('a1234567', $entity->getMerchantId());
         self::assertEquals('0001110000500826AL9', $entity->getPointOfSaleInfo());
+        self::assertEquals('1.50', $entity->getAmountLocalCurrency());
+        self::assertEquals('Purchase', $entity->getCardTransactionType());
+        self::assertEquals('TEST-001-TX', $entity->getTransactionId());
+        self::assertEquals('ExampleBank-EUR-1', $entity->getPartnerProduct());
     }
 }

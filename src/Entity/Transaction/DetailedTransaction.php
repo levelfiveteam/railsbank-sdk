@@ -241,7 +241,6 @@ class DetailedTransaction extends Entity implements EntityInterface
         $this->merchantbankId = $response->offsetGet('merchantbank_id');
         $this->reference = $response->offsetGet('reference');
         $this->merchantDetails = $response->offsetGet('merchant_details');
-        $this->transactionId = $response->offsetGet('transaction_id');
         $this->createdAt = $response->offsetGet('created_at');
         $this->partnerProduct = $response->offsetGet('partner_product');
         $this->conversionDate = $response->offsetGet('conversion_date');
@@ -256,14 +255,8 @@ class DetailedTransaction extends Entity implements EntityInterface
         $this->beneficiaryAccountId = $response->offsetGet('beneficiary_account_id');
 
         $transactionInfo = new ArrayResponse($response->offsetGet('transaction_info'));
-        $paymentInfo = new ArrayResponse($response->offsetGet('payment_info'));
-        $sourceAccount = new ArrayResponse($paymentInfo->offsetGet('sourceAccount'));
-
+        $this->transactionId = $transactionInfo->offsetGet('transaction_id');
         $this->amount = $transactionInfo->offsetGet('amount');
-
-        $this->sourceAccountName = $sourceAccount->offsetGet('accountName');
-        $this->sourceAccountNumber = $sourceAccount->offsetGet('accountNumber');
-        $this->sourceSortCode = $sourceAccount->offsetGet('sortCode');
 
         parent::__construct($response);
     }
@@ -451,20 +444,5 @@ class DetailedTransaction extends Entity implements EntityInterface
     public function getBeneficiaryAccountId(): ?string
     {
         return $this->beneficiaryAccountId;
-    }
-
-    public function getSourceSortCode(): ?string
-    {
-        return $this->sourceSortCode;
-    }
-
-    public function getSourceAccountNumber(): ?string
-    {
-        return $this->sourceAccountNumber;
-    }
-
-    public function getSourceAccountName(): ?string
-    {
-        return $this->sourceAccountName;
     }
 }
