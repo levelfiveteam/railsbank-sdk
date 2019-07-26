@@ -259,5 +259,16 @@ London',
         self::assertEquals('T6105000019203927', $entity->getAdditionalInfo());
         self::assertEquals('012216', $entity->getMerchantbankId());
         self::assertEquals('2000-01-01T00:00:00.000Z', $entity->getCreatedAt());
+        self::assertEquals('beneficiary', $entity->getFixedSide());
+        self::assertEquals('this is a test payment', $entity->getReference());
+        self::assertEquals('PAYBYPHONE RE ST ALBAN HATFIELD GBR', $entity->getMerchantDetails());
+        self::assertEquals('1.00', $entity->getAmount());
+        self::assertEquals('2018-05-26', $entity->getConversionDate());
+        self::assertEquals('bb8b2428-f94c-41df-8e82-a895ab4d6ac8', $entity->getBeneficiaryId());
+        self::assertEquals('eur', $entity->getAssetType());
+        self::assertEquals('currency', $entity->getAssetClass());
+        self::assertEquals('GBP', $entity->getTransactionCurrency());
+        self::assertEquals('a1234567', $entity->getMerchantId());
+        self::assertEquals('0001110000500826AL9', $entity->getPointOfSaleInfo());
     }
 }

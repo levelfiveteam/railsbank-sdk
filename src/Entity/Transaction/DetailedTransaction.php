@@ -241,12 +241,12 @@ class DetailedTransaction extends Entity implements EntityInterface
         $this->merchantbankId = $response->offsetGet('merchantbank_id');
         $this->reference = $response->offsetGet('reference');
         $this->merchantDetails = $response->offsetGet('merchant_details');
-        $this->amount = $response->offsetGet('amount');
         $this->transactionId = $response->offsetGet('transaction_id');
         $this->createdAt = $response->offsetGet('created_at');
         $this->partnerProduct = $response->offsetGet('partner_product');
         $this->conversionDate = $response->offsetGet('conversion_date');
         $this->beneficiaryId = $response->offsetGet('beneficiary_id');
+        $this->assetClass = $response->offsetGet('asset_class');
         $this->assetType = $response->offsetGet('asset_type');
         $this->transactionCurrency = $response->offsetGet('transaction_currency');
         $this->merchantId = $response->offsetGet('merchant_id');
@@ -255,8 +255,11 @@ class DetailedTransaction extends Entity implements EntityInterface
         $this->cardTransactionType = $response->offsetGet('card_transaction_type');
         $this->beneficiaryAccountId = $response->offsetGet('beneficiary_account_id');
 
+        $transactionInfo = new ArrayResponse($response->offsetGet('transaction_info'));
         $paymentInfo = new ArrayResponse($response->offsetGet('payment_info'));
         $sourceAccount = new ArrayResponse($paymentInfo->offsetGet('sourceAccount'));
+
+        $this->amount = $transactionInfo->offsetGet('amount');
 
         $this->sourceAccountName = $sourceAccount->offsetGet('accountName');
         $this->sourceAccountNumber = $sourceAccount->offsetGet('accountNumber');
