@@ -14,7 +14,7 @@ class TransactionTest extends TestCase
             'ledger_entry_id' => '1233123-123123-21321',
             'transaction_id' => '123123',
             'amount' => '123.22',
-            'ledger_entry_type' => 'cash',
+            'ledger_entry_type' => 'credit',
         ];
 
         $entity = new Transaction($response);
@@ -23,6 +23,8 @@ class TransactionTest extends TestCase
         self::assertEquals('1233123-123123-21321', $entity->getLedgerEntryId());
         self::assertEquals('123123', $entity->getTransactionId());
         self::assertEquals('123.22', $entity->getAmount());
-        self::assertEquals('cash', $entity->getLedgerEntryType());
+        self::assertEquals('credit', $entity->getLedgerEntryType());
+        self::assertTrue($entity->isCredit());
+        self::assertFalse($entity->isDebit());
     }
 }

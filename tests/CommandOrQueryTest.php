@@ -28,7 +28,7 @@ abstract class CommandOrQueryTest extends TestCase implements CommandOrQueryTest
 
         self::assertInstanceOf(Command::class, $command);
 
-        if ($response) {
+        if ($response || is_array($response)) {
             self::assertEquals($command->getBody(), $response);
         }
     }
