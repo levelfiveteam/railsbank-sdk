@@ -13,6 +13,6 @@ class GetVersion extends Command implements CommandInterface
 
     public function getBody()
     {
-        //
+        return [];
     }
 }

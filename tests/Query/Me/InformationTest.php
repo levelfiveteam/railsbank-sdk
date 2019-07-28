@@ -18,6 +18,7 @@ class InformationTest extends CommandOrQueryTest
             'no input throws error' => [
                 false,
                 [],
+                [],
             ],
         ];
     }
