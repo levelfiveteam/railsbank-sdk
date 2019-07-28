@@ -49,7 +49,7 @@ class Railsbank
     private function getConfiguration(string $configFile)
     {
         if (empty($configFile)) {
-            return [];
+            throw new InvalidConfigException();
         }
 
         $config = require_once($configFile);
