@@ -6,6 +6,9 @@ use DomainException;
 use Railsbank\CommandInterface;
 use PHPUnit\Framework\TestCase;
 use Railsbank\Command;
+use Railsbank\RailsbankConfig;
+use Zend\Config\Config;
+use Zend\InputFilter\InputFilterInterface;
 
 abstract class CommandOrQueryTest extends TestCase implements CommandOrQueryTestInterface
 {
@@ -25,11 +28,12 @@ abstract class CommandOrQueryTest extends TestCase implements CommandOrQueryTest
 
         /** @var CommandInterface $command */
         $command = new $this->command($input);
-
         self::assertInstanceOf(Command::class, $command);
 
-        if ($response) {
+        if ($response || is_array($response)) {
             self::assertEquals($command->getBody(), $response);
         }
+
+        self::assertInstanceOf(InputFilterInterface::class, $command->getInput());
     }
 }

@@ -1,15 +1,15 @@
 <?php
 
-namespace Test\Query\Version;
+namespace Test\Query\Me;
 
-use Railsbank\Query\Version\GetVersion;
+use Railsbank\Query\Me\PHPVersion;
 use Test\CommandOrQueryTest;
 
-class GetVersionTest extends CommandOrQueryTest
+class PHPVersionTest extends CommandOrQueryTest
 {
     public function setUp()
     {
-        $this->command = GetVersion::class;
+        $this->command = PHPVersion::class;
     }
 
     public function getCommandInputs(): array
@@ -17,6 +17,7 @@ class GetVersionTest extends CommandOrQueryTest
         return [
             'no input throws error' => [
                 false,
+                [],
                 [],
             ],
         ];

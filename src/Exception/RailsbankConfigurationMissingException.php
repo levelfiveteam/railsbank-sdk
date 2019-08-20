@@ -2,8 +2,6 @@
 
 namespace Railsbank\Exception;
 
-use Throwable;
-
 class RailsbankConfigurationMissingException extends \Exception
 {
     public function __construct($key = "")
@@ -11,7 +9,7 @@ class RailsbankConfigurationMissingException extends \Exception
         $message = 'Railsbank configuration missing, refer to documentation.';
 
         if ($key !== '') {
-            $message .= '  Key and/or value missing=' . $key;
+            $message .= '  Key and/or value missing=' . $key . ' or all mode configuration are missing';
         }
 
         parent::__construct($message, 500);

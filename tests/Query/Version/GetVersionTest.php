@@ -1,15 +1,15 @@
 <?php
 
-namespace Test\Query\Me;
+namespace Test\Query\Version;
 
-use Railsbank\Query\Me\Information;
+use Railsbank\Query\Version\GetVersion;
 use Test\CommandOrQueryTest;
 
-class InformationTest extends CommandOrQueryTest
+class GetVersionTest extends CommandOrQueryTest
 {
     public function setUp()
     {
-        $this->command = Information::class;
+        $this->command = GetVersion::class;
     }
 
     public function getCommandInputs(): array

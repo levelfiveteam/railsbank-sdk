@@ -19,13 +19,7 @@ class GetVersionHandler extends Handler
     public function handleGetVersion(GetVersion $command)
     {
         $client = new RailsbankClient($command->getRailsbankConfig());
-
-        try {
-            $version = $client->handleApiCall($command);
-        } catch (\Exception $e) {
-            // handle exceptions
-        }
-
+        $version = $client->handleApiCall($command);
         return $version;
     }
 }
