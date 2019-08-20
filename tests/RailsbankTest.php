@@ -3,6 +3,7 @@
 namespace Test;
 
 use Railsbank\Exception\InvalidConfigException;
+use Railsbank\Exception\RailsbankConfigurationMissingException;
 use Railsbank\Exception\RailsbankConfigurationMissingValueException;
 use Railsbank\Railsbank;
 use PHPUnit\Framework\TestCase;
@@ -28,5 +29,12 @@ class RailsbankTest extends TestCase
         self::expectException(RailsbankConfigurationMissingValueException::class);
         self::expectExceptionMessage('Railsbank configuration value missing for play.base_url, refer to documentation.');
         new Railsbank(__DIR__ . '/configtest/emptyarrayconfig.php', 'testtt');
+    }
+
+    public function testConfigurationWithNoMode()
+    {
+        self::expectException(RailsbankConfigurationMissingException::class);
+        self::expectExceptionMessage('Railsbank configuration missing, refer to documentation.  Key and/or value missing=mode');
+        new Railsbank(__DIR__ . '/configtest/nomode.php', 'testtt');
     }
 }
