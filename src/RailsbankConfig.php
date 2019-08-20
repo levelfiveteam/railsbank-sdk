@@ -35,18 +35,22 @@ class RailsbankConfig
      */
     public function __construct(array $config = [], string $mode = null)
     {
-        $configServiceFactory = new ConfigServiceFactory($config);
-        $this->configService = $configServiceFactory->getConfigService();
-
-        /** @var Config $railsbankConfig */
-        $railsbankConfig = $this->configService->get('railsbank_configuration');
-
         if ( !empty($mode)) {
             $this->mode = $mode;
         }
 
+        $mode = $this->getMode();
+
+        $configServiceFactory = new ConfigServiceFactory($config);
+        $this->configService = $configServiceFactory->getConfigService();
+
+        die('test');
+
+        /** @var Config $railsbankConfig */
+        $railsbankConfig = $this->configService->get('railsbank_configuration');
+
         /** @var Config railsbankConfig */
-        $this->railsbankConfig = $railsbankConfig->get($this->getMode());
+        $this->railsbankConfig = $railsbankConfig->get($mode);
     }
 
     public function getBaseConfig() : Config

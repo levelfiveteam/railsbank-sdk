@@ -65,9 +65,9 @@ class ConfigServiceFactory
     private function validateConfig(Config $config) :? bool
     {
         $railsbankConfigValidator = new RailsbankConfigValidator();
-        return $railsbankConfigValidator->validateConfig(
-            $this->getRailsbankConfiguration($config)
-        );
+        $railsbankConfig = $this->getRailsbankConfiguration($config);
+
+        return $railsbankConfigValidator->validateConfig($railsbankConfig);
     }
 
     /**

@@ -13,13 +13,20 @@ class RailsbankTest extends TestCase
     {
         self::expectException(InvalidConfigException::class);
         self::expectExceptionMessage('Configuration not valid, refer to documentation.');
-        $railsbank = new Railsbank();
+        new Railsbank();
     }
 
     public function testInvalidConfigurationThrowsError()
     {
         self::expectException(InvalidConfigException::class);
         self::expectExceptionMessage('Configuration not valid, refer to documentation.');
-        $railsbank = new Railsbank(__DIR__ . '/configtest/emptyconfig.php', 'testtttt');
+        new Railsbank(__DIR__ . '/configtest/emptyconfig.php', 'testtttt');
+    }
+
+    public function testInvalidMode()
+    {
+        self::expectException(RailsbankConfigurationMissingValueException::class);
+        self::expectExceptionMessage('Railsbank configuration value missing for play.base_url, refer to documentation.');
+        new Railsbank(__DIR__ . '/configtest/emptyarrayconfig.php', 'testtt');
     }
 }
