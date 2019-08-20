@@ -5,6 +5,9 @@ namespace Test;
 use Railsbank\Exception\InvalidConfigException;
 use Railsbank\Exception\RailsbankConfigurationMissingException;
 use Railsbank\Exception\RailsbankConfigurationMissingValueException;
+use Railsbank\Query\Me\PHPVersion;
+use Railsbank\Query\Version\GetVersion;
+use Railsbank\QueryHandler\Version\GetVersionHandler;
 use Railsbank\Railsbank;
 use PHPUnit\Framework\TestCase;
 
@@ -36,5 +39,14 @@ class RailsbankTest extends TestCase
         self::expectException(RailsbankConfigurationMissingException::class);
         self::expectExceptionMessage('Railsbank configuration missing, refer to documentation.  Key and/or value missing=mode');
         new Railsbank(__DIR__ . '/configtest/nomode.php', 'testtt');
+    }
+
+    public function testValidConfiguration()
+    {
+        $railsbank = new Railsbank(__DIR__ .'/configtest/validconfig.php', 'play');
+        $command = $railsbank->handle(new PHPVersion());
+
+        self::assertNotNull($command);
+        self::assertIsString($command);
     }
 }

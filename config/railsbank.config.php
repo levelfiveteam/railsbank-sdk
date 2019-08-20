@@ -31,6 +31,7 @@ return [
     'commands' => [
         Query\Version\GetVersion::class => QueryHandler\Version\GetVersionHandler::class,
         Query\Me\Information::class => QueryHandler\Me\InformationHandler::class,
+        Query\Me\PHPVersion::class => QueryHandler\Me\PHPVersionHandler::class,
         Query\Customer\GetLedger::class => QueryHandler\Customer\GetLedgerHandler::class,
         Query\Customer\GetLedgers::class => QueryHandler\Customer\GetLedgersHandler::class,
         Query\Customer\GetEndusers::class => QueryHandler\Customer\GetEndusersHandler::class,

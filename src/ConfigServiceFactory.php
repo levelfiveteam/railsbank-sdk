@@ -66,7 +66,6 @@ class ConfigServiceFactory
     {
         $railsbankConfigValidator = new RailsbankConfigValidator();
         $railsbankConfig = $this->getRailsbankConfiguration($config);
-
         return $railsbankConfigValidator->validateConfig($railsbankConfig);
     }
 
@@ -78,10 +77,10 @@ class ConfigServiceFactory
      */
     private function getRailsbankConfiguration(Config $config) :? Config
     {
-        if (! $config = $config->offsetGet('railsbank_configuration')) {
+        if (! $config->offsetExists('railsbank_configuration')) {
             throw new RailsbankConfigurationMissingException();
         }
 
-        return $config;
+        return $config->offsetGet('railsbank_configuration');
     }
 }
