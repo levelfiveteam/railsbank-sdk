@@ -44,8 +44,6 @@ class RailsbankConfig
         $configServiceFactory = new ConfigServiceFactory($config);
         $this->configService = $configServiceFactory->getConfigService();
 
-        die('test');
-
         /** @var Config $railsbankConfig */
         $railsbankConfig = $this->configService->get('railsbank_configuration');
 
