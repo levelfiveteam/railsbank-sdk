@@ -12,6 +12,9 @@ This is the Railsbank integration using PHP.
 [![Coverage Status](https://coveralls.io/repos/github/levelfiveteam/railsbank-sdk/badge.svg?branch=master)](https://coveralls.io/github/levelfiveteam/railsbank-sdk?branch=master)
 [![License](https://poser.pugx.org/levelfiveteam/railsbank-sdk/license.png)](https://packagist.org/packages/levelfiveteam/railsbank-sdk)
 
+## Donations
+[![Click here to donate with Crypto](https://commerce.coinbase.com/checkout/75a60099-7f7a-428b-b013-e30b147c42c1)
+
 ## Instructions
 
 This is the Railsbank PHP SDK Kit that allows you to provide a full facility to create customer accounts, ledgers, and a mastercard for your business/service.
