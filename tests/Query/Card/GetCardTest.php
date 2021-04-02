@@ -7,7 +7,7 @@ use Test\CommandOrQueryTest;
 
 class GetCardTest extends CommandOrQueryTest
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->command = GetCard::class;
     }

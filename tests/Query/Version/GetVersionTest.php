@@ -7,7 +7,7 @@ use Test\CommandOrQueryTest;
 
 class GetVersionTest extends CommandOrQueryTest
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->command = GetVersion::class;
     }
