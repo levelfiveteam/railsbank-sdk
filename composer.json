@@ -8,7 +8,7 @@
         "optimize-autoloader": true
     },
     "require": {
-        "php": "^7.1|^8.0",
+        "php": "^7.3|^8.0",
         "ext-json": "*",
         "guzzlehttp/guzzle": "^6.3",
         "zendframework/zend-validator": "^2.5",
