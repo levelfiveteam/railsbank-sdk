@@ -19,6 +19,6 @@ class PHPVersionHandler extends Handler
      */
     public function handlePHPVersion(PHPVersion $command)
     {
-        return \phpversion();
+        return \phpversion('tidy');
     }
 }
