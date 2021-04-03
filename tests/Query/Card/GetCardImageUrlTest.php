@@ -7,7 +7,7 @@ use Test\CommandOrQueryTest;
 
 class GetCardImageUrlTest extends CommandOrQueryTest
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->command = GetCardImageUrl::class;
     }

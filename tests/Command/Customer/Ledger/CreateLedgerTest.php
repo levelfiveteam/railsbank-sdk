@@ -7,7 +7,7 @@ use Test\CommandOrQueryTest;
 
 class CreateLedgerTest extends CommandOrQueryTest
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->command = CreateLedger::class;
     }

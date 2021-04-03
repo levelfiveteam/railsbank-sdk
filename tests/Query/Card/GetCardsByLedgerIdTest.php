@@ -7,7 +7,7 @@ use Test\CommandOrQueryTest;
 
 class GetCardsByLedgerIdTest extends CommandOrQueryTest
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->command = GetCardsByLedgerId::class;
     }

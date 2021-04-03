@@ -52,7 +52,12 @@ class Railsbank
             throw new InvalidConfigException();
         }
 
-        $config = require_once($configFile);
+        /**
+         * Do not use `require_once` as it returns true if the file is
+         * already included and does not give you the configuration back
+         * from the file.
+         */
+        $config = require($configFile);
 
         if ( !is_array($config)) {
             throw new InvalidConfigException();

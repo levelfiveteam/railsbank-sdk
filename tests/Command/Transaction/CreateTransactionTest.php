@@ -7,7 +7,7 @@ use Test\CommandOrQueryTest;
 
 class CreateTransactionTest extends CommandOrQueryTest
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->command = CreateTransaction::class;
     }

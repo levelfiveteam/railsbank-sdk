@@ -7,7 +7,7 @@ use Test\CommandOrQueryTest;
 
 class CreateBeneficiaryTest extends CommandOrQueryTest
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->command = CreateBeneficiary::class;
     }

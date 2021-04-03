@@ -8,7 +8,7 @@ use Test\CommandOrQueryTest;
 
 class PersonTest extends CommandOrQueryTest
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->command = CreatePerson::class;
     }

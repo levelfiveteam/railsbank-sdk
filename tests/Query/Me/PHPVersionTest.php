@@ -7,7 +7,7 @@ use Test\CommandOrQueryTest;
 
 class PHPVersionTest extends CommandOrQueryTest
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->command = PHPVersion::class;
     }

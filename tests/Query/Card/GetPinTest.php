@@ -7,7 +7,7 @@ use Test\CommandOrQueryTest;
 
 class GetPinTest extends CommandOrQueryTest
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->command = GetPin::class;
     }

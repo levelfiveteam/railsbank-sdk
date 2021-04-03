@@ -7,7 +7,7 @@ use Test\CommandOrQueryTest;
 
 class GetEndusersTest extends CommandOrQueryTest
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->command = GetEndusers::class;
     }
